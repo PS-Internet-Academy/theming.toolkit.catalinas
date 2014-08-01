@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    >
+    
+    <theme 
+        href="lascatalinas/lascatalinas-base.html" 
+        css:if-content="#visual-portal-wrapper"
+    />
+     
+    <append 
+        css:content-children="#viewlet-above-content > .carouselWrapper"
+        css:theme="#feature-listing-above-footer"
+        method="raw"
+    />
+    
+    <drop
+        css:content=".carouselWrapper"
+    />
+    
+    <drop
+        css:theme="#feature-listing-slider"
+        css:if-not-content=".carouselWrapper"
+    />
+    
+    <drop
+        css:content="#viewlet-above-content > .carousel"
+    />
+    
+    <drop
+        css:content="#viewlet-above-content > .carouselWrapper"
+    /> 
+     
+    <drop
+        css:content="#portal-breadcrumbs"
+    />
+    
+    <prepend
+        css:theme="#move-breadcrumbs"
+        css:content="#portal-breadcrumbs"
+        method="raw"
+    /> 
+     
+    <drop css:content="#portal-globalnav"/>  
+      
+    <rules css:if-content="#visual-portal-wrapper">
+    
+    <drop
+        css:content=".carousel"
+    />
+    
+    <copy
+        attributes="class"
+        css:content="body"
+        css:theme="div#globalwrapper"
+    />
+    
+    <replace
+        css:theme="div#header .header-content"
+        css:content="div#portal-top"
+    />
+    
+    <replace
+        css:theme-children="div#main"
+        css:content="div#portal-columns"
+    />
+    
+    <replace
+        css:theme-children="div#footer-wrapper"
+        css:content="div#portal-footer"
+    />   
+    
+    <replace 
+        theme="/html/head/title" 
+        content="/html/head/title" 
+    />      
+    
+    <prepend theme="/html/head" content="/html/head/base"/>
+
+    <after css:theme="meta[http-equiv='X-UA-Compatible']"
+    content="/html/head/link | /html/head/style | /html/head/script | /html/head/meta" />
+
+    <replace css:theme="#logo" css:content="#portal-logo"/>
+    
+    <replace css:theme-children="#nav">
+        <xsl:for-each css:select="#portal-globalnav > li">
+            <xi:include href="navigation-rules.xml"/>
+        </xsl:for-each>
+    </replace>
+
+    <append css:theme=".footer" css:content-children="#portal-footer-wrapper"/>
+    <append css:theme=".footer" css:content="div#visual-portal-wrapper > div.row > script"/>
+
+    <xi:include href="facetednavigation-rules.xml"/>
+    <xi:include href="lascatalinas/lascatalinas-rules.xml"/>
+    <append css:theme="#site-scripts" css:content="#portal-footer-wrapper > div > script"/>
+    </rules>
+</rules>

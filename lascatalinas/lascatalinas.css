@@ -1,0 +1,205 @@
+.searchSection{
+    display:none;   
+}
+#portal-searchbox{
+    margin:0;   
+}
+#portal-searchbox #livesearch0{
+    margin: 9px 0 0;  
+}
+#portal-searchbox #livesearch0 #searchGadget,
+#searchGadget, .LSBox input.searchButton{
+    margin-bottom:0;   
+    color: #cfcfcf;
+    font-family: arial;
+    margin-bottom: 0;
+    size: 16px;
+    background-color: #f5f5f5;
+    border: 1px solid #b7b7b7;
+    border-radius: 0;
+}
+#searchGadget, .LSBox input.searchButton{
+    margin:0;   
+}
+#fullscreen-slider .carousel {
+    margin: 0;
+}
+#portal-columns #portal-logo{
+    display:block;   
+}
+#portal-columns #portal-logo img{
+    margin: 0;  
+}
+#fullbgnav{
+    background:#e5d8bd;
+} 
+#fullbgnav #navibar .nav li.active,
+#fullbgnav #navibar .nav li:hover{
+    background-color:#ffffff;
+}
+#fullbgnav #navibar .nav li.active a,
+#fullbgnav #navibar .nav li a:hover{
+    color:#e37f1c ;
+}
+#fullbgnav #navibar .nav li a{
+    color: #525252;
+    font-family: georgia;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 10px 18px;
+}
+#fullscreen-slider .carousel-banners .carousel-text{
+    background: none repeat scroll 0 0 #000000;
+    bottom: 92px !important;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: normal;
+    height: 21px;
+    left: auto;
+    padding: 20px;
+    right: 15%;
+    text-transform: uppercase;
+    top: 228px !important;
+    width: auto;
+}
+.portletWrapper .portletQuickSearch .portletHeader{
+    background-color: transparent;
+    color: #818282;
+    font-family: georgia;
+    font-size: 30px;
+    font-weight: normal;
+    padding-left: 0; 
+}
+.portletWrapper .portletQuickSearch .portletItem{
+    background-color:#ebebeb; 
+}
+#main .portletWrapper .portletQuickSearch .portletItem label{
+    color: #828282;
+    font-family: arial;
+    font-size: 18px;
+    font-weight: normal;
+}
+#main .portletWrapper .portletQuickSearch .portletItem label .label{
+    color: #828282;
+    font-family: georgia;
+    font-size: 18px;
+    font-weight: normal;   
+}
+#main .portletWrapper .portletQuickSearch .portletItem input[type="checkbox"] {
+    height: 16px;
+    margin: 0;
+    vertical-align: text-bottom;
+    width: 17px;
+}
+.portletQuickSearch .formControls{
+    text-align:right;
+    margin: 1em 0;
+}
+.portletQuickSearch .formControls #form-buttons-search{
+    background-color: #00a15f;
+    border: 1px solid #7cc8a9;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 32px;
+    padding: 0 24px;
+    text-transform: uppercase;
+    width: auto;
+}
+#portal-colophon .colophonWrapper p{
+    font-size:12px;
+    text-transform: uppercase;
+    font-family: arial;
+    color: #c3c3c3;
+    line-height: 42px;
+}
+#portal-colophon{
+    background-color:#222222;
+}
+#footer-wrapper{
+    background-color:#424242;   
+}
+#footer-wrapper #doormat-container{
+    padding: 20px 0 30px;   
+}
+#footer-wrapper #doormat-container .doormatColumn h2{
+    font-size:18px;
+    text-transform: uppercase;
+    font-family: arial;
+    color:#ffffff;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 0.2px;
+    line-height: 40px;
+}
+#footer-wrapper #doormat-container .column-0 p{
+    font-family: arial;
+    font-size:18px;
+    color:#c3c3c3;
+}
+#footer-wrapper #doormat-container .column-1 a{
+    font-family: arial;
+    font-size:18px;
+    color:#c3c3c3;
+    text-transform: uppercase;
+    line-height: 36px;
+}
+#footer-wrapper #doormat-container .column-1 a:hover{
+    color:#ffffff;
+}
+#footer-wrapper #doormat-container .column-2 p{
+    font-family: arial;
+    font-size:12px;
+    color:#c3c3c3;
+}
+#footer-wrapper #doormat-container .column-3 p{
+    font-family: arial;
+    font-size:18px;
+    color:#c3c3c3;
+}
+#footer-wrapper #doormat-container .column-3 p:hover{
+    color:#ffffff;
+}
+.lascatalinas-listing .tile-header h2{
+    color: #828282;
+    font-family: georgia;
+    font-size: 30px;
+    font-weight: normal;     
+}
+.lascatalinas-listing{
+    margin-left:2%;    
+}
+.lascatalinas-listing .collection-item{
+    margin-right: 1%;
+    width: 32%;
+    float:left;
+    min-height: 360px;
+}
+.lascatalinas-listing .collection-item h2{
+    font-family: arial;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1.5em;
+}
+#content .lascatalinas-listing .collection-item h2 a,
+#content .lascatalinas-listing .collection-item h2 a:hover{
+    color: #828282 !important;
+    font-weight: bold !important;
+}
+.lascatalinas-listing .listing-collection-tile figure{
+    border: 0;
+    margin: 0;
+    padding: 0;  
+}
+#footer-wrapper #doormat-container .column-3 p.footer_button{
+    background-color:#5987c5;   
+    color:#ffffff;
+    line-height: 34px;
+    padding-left: 6px;
+    width: 142px;
+}
+#footer-wrapper #doormat-container .column-3 p.footer_button img{
+    vertical-align: calc(-6px);
+}
