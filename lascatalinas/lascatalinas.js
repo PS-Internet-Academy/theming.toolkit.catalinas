@@ -1,4 +1,5 @@
 $(document).ready(function () {
     $("#fullscreen-slider").insertBefore("#fullbgnav");
-    $("#portal-logo").insertBefore("#portal-column-one");  
+    $(".section-lascatalinas-cover #portal-logo").insertBefore("#portal-column-one");  
+    $(".portlet-gallaria").replaceWith($("#listing-images"));
 });
