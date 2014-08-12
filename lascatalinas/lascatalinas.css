@@ -11,7 +11,7 @@
 #searchGadget, .LSBox input.searchButton{
     margin-bottom:0;   
     color: #cfcfcf;
-    font-family: arial;
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 0;
     size: 16px;
     background-color: #f5f5f5;
@@ -43,23 +43,32 @@
 }
 #fullbgnav #navibar .nav li a{
     color: #525252;
-    font-family: georgia;
+    font-family: Georgia, serif;
     font-size: 18px;
     line-height: 26px;
     padding: 10px 18px;
 }
 #fullscreen-slider .carousel-banners .carousel-text{
+    height: 100%;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    right: 0;
+}
+#fullscreen-slider .carousel-banners .carousel-text span{
+    position:absolute;
     background: none repeat scroll 0 0 #000000;
     bottom: 92px !important;
     color: #ffffff;
-    font-family: arial;
-    font-size: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
     font-style: normal;
     font-weight: normal;
-    height: 21px;
+    height: 18px;
     left: auto;
     padding: 20px;
-    right: 15%;
+    right: 10%;
     text-transform: uppercase;
     top: 485px !important;
     width: auto;
@@ -67,7 +76,7 @@
 .portletWrapper .portletQuickSearch .portletHeader{
     background-color: transparent;
     color: #818282;
-    font-family: georgia;
+    font-family: Georgia, serif;
     font-size: 30px;
     font-weight: normal;
     padding-left: 0; 
@@ -77,14 +86,14 @@
 }
 #main .portletWrapper .portletQuickSearch .portletItem label{
     color: #828282;
-    font-family: arial;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-weight: normal;
 }
 #main .portletWrapper .portletQuickSearch .portletItem label .label{
     color: #828282;
-    font-family: georgia;
-    font-size: 18px;
+    font-family: Georgia, serif;
+    font-size: 16px;
     font-weight: normal;   
 }
 #main .portletWrapper .portletQuickSearch .portletItem input[type="checkbox"] {
@@ -111,7 +120,7 @@
 #portal-colophon .colophonWrapper p{
     font-size:12px;
     text-transform: uppercase;
-    font-family: arial;
+    font-family: Arial, Helvetica, sans-serif;
     color: #c3c3c3;
     line-height: 42px;
 }
@@ -127,44 +136,49 @@
 #footer-wrapper #doormat-container .doormatColumn h2{
     font-size:18px;
     text-transform: uppercase;
-    font-family: arial;
+    font-family: Arial, Helvetica, sans-serif;
     color:#ffffff;
     font-weight: bold;
     margin: 0;
     letter-spacing: 0.2px;
-    line-height: 40px;
+    min-height: 40px;
+    line-height: normal;
 }
-#footer-wrapper #doormat-container .column-0 p{
-    font-family: arial;
-    font-size:15px;
+#footer-wrapper #doormat-container .doormatColumn p{
+    font-family: Arial, Helvetica, sans-serif;
     color:#c3c3c3;
 }
-#footer-wrapper #doormat-container .column-1 a{
-    font-family: arial;
-    font-size:15px;
+#footer-wrapper #doormat-container .doormatColumn p.back-icon{
+    padding-left: 35px;
+    padding-top: 4px;  
+}
+#footer-wrapper #doormat-container .doormatColumn.column-0 p{
+    font-size:14px;
+}
+#footer-wrapper #doormat-container .doormatColumn.column-2 p{
+    font-size:12px;
+}
+#footer-wrapper #doormat-container .doormatColumn.column-3 p{
+    font-size:18px;
+}
+#footer-wrapper #doormat-container .doormatColumn.column-3 p:hover{
+    color:#ffffff;
+}
+#footer-wrapper #doormat-container .doormatColumn a{
+    font-family: Arial, Helvetica, sans-serif;  
     color:#c3c3c3;
     text-transform: uppercase;
+}
+#footer-wrapper #doormat-container .doormatColumn a:hover{
+    color:#ffffff;
+}
+#footer-wrapper #doormat-container .doormatColumn.column-1 a{
+    font-size:15px;
     line-height: 36px;
-}
-#footer-wrapper #doormat-container .column-1 a:hover{
-    color:#ffffff;
-}
-#footer-wrapper #doormat-container .column-2 p{
-    font-family: arial;
-    font-size:12px;
-    color:#c3c3c3;
-}
-#footer-wrapper #doormat-container .column-3 p{
-    font-family: arial;
-    font-size:18px;
-    color:#c3c3c3;
-}
-#footer-wrapper #doormat-container .column-3 p:hover{
-    color:#ffffff;
 }
 .lascatalinas-listing .tile-header h2{
     color: #828282;
-    font-family: georgia;
+    font-family: Georgia, serif;
     font-size: 30px;
     font-weight: normal;     
 }
@@ -173,12 +187,10 @@
 }
 .lascatalinas-listing .collection-item{
     margin-right: 1%;
-    width: 32%;
     float:left;
-    height: 400px;
 }
 .lascatalinas-listing .collection-item h2{
-    font-family: arial;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     text-transform: uppercase;
     line-height: 1.5em;
@@ -189,12 +201,13 @@
     font-weight: bold !important;
 }
 .lascatalinas-listing .listing-collection-tile figure{
+    background-color:#ddd;
     border: 0;
     margin: 0;
     padding: 0;  
+    margin-bottom: 1.5em;
 }
 .lascatalinas-listing .listing-collection-tile figure img{
-    height:200px; 
     text-align: center;
 }
 #footer-wrapper #doormat-container .column-3 p.footer_button{
@@ -219,20 +232,16 @@
     line-height: 34px;
     padding-left: 6px;
     text-transform: uppercase;
-    font-family: arial;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
 #fullscreen-slider .carousel{
-    height:auto;
+    height: 634px;
+    overflow: hidden;
 }
 #portal-logo{
     background:#ffffff;   
-    position:absolute;
     top: 75px;
-}
-.section-lascatalinas-cover #portal-logo{
-    background:#ffffff;   
-    position:static; 
 }
 ul#portal-languageselector,#portal-personaltools{
     position:absolute;   
@@ -271,4 +280,147 @@ table.listing tr.odd th{
     border: 0;
     margin-bottom: 0;
     padding-bottom: 0;   
+}
+#fullscreen-slider .carousel .carousel-pager-item{
+    background-color: #7e8083;
+    border: 1px solid #ebebeb;
+    height: 15px;
+    padding: 0;
+    width: 15px;
+}
+#fullscreen-slider .carousel .carousel-pager-item-active{
+    background-color: #ebebeb;    
+}
+#fullscreen-slider .carousel .carousel-pager .carousel-pager-button-prev{
+    background-color: transparent;
+    background-image: url("img/slider-arrow-prev.png");
+    height: 61px;
+    width: 60px;
+    bottom: 290px;
+    position:absolute;
+    left: 36px;
+}
+#fullscreen-slider .carousel .carousel-pager .carousel-pager-button-next{
+    background-color: transparent;
+    background-image: url("img/slider-arrow-next.png");
+    height: 61px;
+    width: 60px;
+    bottom: 290px;
+    position:absolute;
+    right: 36px;
+}
+@media (min-width: 1200px){
+    .lascatalinas-listing .collection-item{
+        width: 32%;
+    }
+    .lascatalinas-listing .listing-collection-tile figure{
+        min-height:182px; 
+    }
+    #fullscreen-slider .carousel-banners .carousel-text{
+        width: 1080px;
+    } 
+    #main .portletWrapper .portletQuickSearch .portletItem label .label{
+        font-size: 16px;  
+    }
+    .lascatalinas-listing .collection-item{
+        height: 300px;
+        overflow: hidden;
+    }
+}
+@media (min-width: 980px) and (max-width:1199px){
+    .lascatalinas-listing .collection-item{
+        width: 49%;
+    }
+    .lascatalinas-listing .listing-collection-tile figure{
+        min-height:219px; 
+    }
+    #fullscreen-slider .carousel-banners .carousel-text{
+        width: 870px;
+    }  
+    #main .portletWrapper .portletQuickSearch .portletItem label .label{
+        font-size: 13px;  
+    }
+}
+@media (min-width: 768px) and (max-width: 979px){
+    .lascatalinas-listing .collection-item{
+        width: 49%;
+    }
+    .lascatalinas-listing .listing-collection-tile figure{
+        min-height:238px; 
+    }
+    #fullscreen-slider .carousel-banners .carousel-text{
+        width: 680px;
+    } 
+    #main .portletWrapper .portletQuickSearch .portletItem label .label{
+        font-size: 13px;  
+    }
+}
+@media (min-width: 600px) and (max-width: 767px){
+    .lascatalinas-listing .collection-item{
+        width: 49%;
+    }
+    .lascatalinas-listing .listing-collection-tile figure{
+        min-height:248px; 
+    }
+    #fullscreen-slider .carousel-banners .carousel-text{
+        display:none;
+    }    
+    #main .portletWrapper .portletQuickSearch .portletItem label .label{
+        font-size: 16px;  
+    }
+}
+@media (min-width: 481px) and (max-width: 599px){
+    .lascatalinas-listing .collection-item{
+        width: 100%;
+    }
+    #fullscreen-slider .carousel-banners .carousel-text{
+        display:none;
+    }  
+    #main .portletWrapper .portletQuickSearch .portletItem label .label{
+        font-size: 16px;  
+    }
+}
+@media (min-width: 401px) and (max-width: 480px){
+    .lascatalinas-listing .collection-item{
+        width: 100%;
+    }
+    #fullscreen-slider .carousel-banners .carousel-text{
+        display:none;
+    }   
+    #main .portletWrapper .portletQuickSearch .portletItem label .label{
+        font-size: 16px;  
+    }
+}
+@media (min-width: 321px) and (max-width: 400px){
+    .lascatalinas-listing .collection-item{
+        width: 100%;
+    }
+    #fullscreen-slider .carousel-banners .carousel-text{
+        display:none;
+    }    
+    #main .portletWrapper .portletQuickSearch .portletItem label .label{
+        font-size: 16px;  
+    }
+}
+@media (min-width: 241px) and (max-width: 320px){
+    .lascatalinas-listing .collection-item{
+        width: 100%;
+    }
+    #fullscreen-slider .carousel-banners .carousel-text{
+        display:none;
+    }    
+    #main .portletWrapper .portletQuickSearch .portletItem label .label{
+        font-size: 16px;  
+    }
+}
+@media (max-width: 240px){
+    .lascatalinas-listing .collection-item{
+        width: 100%;
+    }
+    #fullscreen-slider .carousel-banners .carousel-text{
+        display:none;
+    } 
+    #main .portletWrapper .portletQuickSearch .portletItem label .label{
+        font-size: 16px;  
+    }
 }
