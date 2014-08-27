@@ -1,6 +1,9 @@
 .searchSection{
     display:none;   
 }
+.navbar .nav{
+    width: 70%;
+}
 #portal-searchbox{
     margin:0;   
 }
@@ -68,14 +71,16 @@
     height: 18px;
     left: auto;
     padding: 20px;
-    right: 10%;
     text-transform: uppercase;
-    top: 485px !important;
     width: auto;
+}
+.carousel-banner, .carousel-banner img{
+    height: auto !important;
+    max-width:100%;
 }
 .portletWrapper .portletQuickSearch .portletHeader{
     background-color: transparent;
-    color: #818282;
+    color: #828282;
     font-family: Georgia, serif;
     font-size: 30px;
     font-weight: normal;
@@ -116,6 +121,7 @@
     padding: 0 24px;
     text-transform: uppercase;
     width: auto;
+    border-radius: 0;
 }
 #portal-colophon .colophonWrapper p{
     font-size:12px;
@@ -176,39 +182,37 @@
     font-size:15px;
     line-height: 36px;
 }
-.lascatalinas-listing .tile-header h2{
-    color: #828282;
-    font-family: Georgia, serif;
-    font-size: 30px;
-    font-weight: normal;     
-}
-.lascatalinas-listing{
-    margin-left:2%;    
-}
-.lascatalinas-listing .collection-item{
-    margin-right: 1%;
+.listing-collection-tile .collection-item{
+    margin-right: 3%;
     float:left;
 }
-.lascatalinas-listing .collection-item h2{
+.listing-collection-tileg .collection-item h2{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     text-transform: uppercase;
     line-height: 1.5em;
 }
-#content .lascatalinas-listing .collection-item h2 a,
-#content .lascatalinas-listing .collection-item h2 a:hover{
+#content .listing-collection-tile .collection-item h2{
+    line-height:normal; 
+     font-size: 18px;
+}
+#content .listing-collection-tile .collection-item h2 a,
+#content .listing-collection-tile .collection-item h2 a:hover{
     color: #828282 !important;
     font-weight: bold !important;
+    font-size: 18px;
 }
-.lascatalinas-listing .listing-collection-tile figure{
+.listing-collection-tile .listing-collection-tile figure{
     background-color:#ddd;
     border: 0;
     margin: 0;
     padding: 0;  
     margin-bottom: 1.5em;
 }
-.lascatalinas-listing .listing-collection-tile figure img{
+.listing-collection-tile figure img{
     text-align: center;
+    max-height: 250px;
+    min-height: 250px;
 }
 #footer-wrapper #doormat-container .column-3 p.footer_button{
     background-color:#5987c5;   
@@ -220,11 +224,15 @@
 #footer-wrapper #doormat-container .column-3 p.footer_button img{
     vertical-align: calc(-6px);
 }
-#listing-search .tileItem {
+.listing-summary .tileItem {
     float: left;
-    margin-right: 1%;
-    min-height: 360px;
-    width: 32%;  
+    margin-right: 3%;
+    max-height: 560px;
+    min-height: 560px;
+    overflow:hidden;
+}
+div.listingBar {
+    clear: both;
 }
 .background-green{   
     background-color: #00a15f;
@@ -236,12 +244,15 @@
     font-size: 18px;
 }
 #fullscreen-slider .carousel{
-    height: 634px;
+    height: auto;
     overflow: hidden;
 }
+#fullscreen-slider .carousel-pager{
+    position: absolute;
+    width:100%;
+}   
 #portal-logo{
     background:#ffffff;   
-    top: 75px;
 }
 ul#portal-languageselector,#portal-personaltools{
     position:absolute;   
@@ -315,12 +326,66 @@ table.listing tr.odd th{
 #fullbgnav .navbar-inner .nav-collapse .nav .dropdown ul.dropdown-menu li a:hover{
     background-color:#e5d8bd !important;   
 }
+.listing-collection-tile .tile-header h2,#content .listing-summary .tileItem .tileHeadline,.listing-summary .tileItem .tileHeadline:hover{
+    font-size:20px;
+    color:#828282;
+    font-family: Georgia,serif;
+    font-weight: normal;
+    margin-bottom: 10px;
+    line-height: normal;
+}
+#content .listing-summary .tileItem .tileHeadline a,.listing-summary .tileItem .tileHeadline a:hover{
+    color:#828282 !important;   
+}
+#content .listing-summary dt{
+    width:30%;  
+}
+#content .listing-summary dd,#content .listing-summary dd.full{
+    width:65%;   
+}
+#content .listing-summary section{
+    width:100%;   
+    margin-top: 2%;
+}
+.listing-collection-tile figure,#content .listing-summary .tileItem figure{
+    border:0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    text-align:center;
+} 
+#content .listing-summary figure a{
+    border:0;   
+    padding:0;
+    display: inline;
+}
+#content .listing-summary figure a img{
+    max-height: 250px;
+    min-height: 250px;
+    max-width: none;
+    width: auto;
+}
+#content .listing-collection-tile .item{
+    float:left;
+    width:100%;
+}
+#content .listing-collection-tile .item .item-heading{
+    width:50%;
+}
 @media (min-width: 1200px){
-    .lascatalinas-listing .collection-item{
-        width: 32%;
+    #portal-logo{ 
+        top: 75px;
     }
-    .lascatalinas-listing .listing-collection-tile figure{
-        min-height:182px; 
+    .listing-summary .tileItem {
+        width: 30%;
+    }
+    .listing-collection-tile .collection-item{
+        width: 30%;   
+    }
+    .listing-collection-tile figure img{
+        max-width: none;
+        width: auto;   
     }
     #fullscreen-slider .carousel-banners .carousel-text{
         width: 1080px;
@@ -328,17 +393,30 @@ table.listing tr.odd th{
     #main .portletWrapper .portletQuickSearch .portletItem label .label{
         font-size: 16px;  
     }
-    .lascatalinas-listing .collection-item{
-        height: 300px;
-        overflow: hidden;
+    #fullscreen-slider .carousel-banners .carousel-text span{
+        right: 0;
+    }
+    .listing-collection-tile figure,#content .listing-summary .tileItem figure{
+        height: 250px;
+    } 
+    #fullscreen-slider .carousel-banners .carousel-text span{
+        top: 65% !important;
     }
 }
 @media (min-width: 980px) and (max-width:1199px){
-    .lascatalinas-listing .collection-item{
-        width: 49%;
+    #portal-logo{ 
+        top: 75px;
     }
-    .lascatalinas-listing .listing-collection-tile figure{
-        min-height:219px; 
+    .listing-summary .tileItem {
+        width: 47%;
+    }
+    .listing-collection-tile .collection-item{
+        width: 47%;
+    }
+    .listing-collection-tile figure img{
+        max-width: none;
+        width: auto;   
+        height: 100%;
     }
     #fullscreen-slider .carousel-banners .carousel-text{
         width: 870px;
@@ -346,13 +424,30 @@ table.listing tr.odd th{
     #main .portletWrapper .portletQuickSearch .portletItem label .label{
         font-size: 13px;  
     }
+    #fullscreen-slider .carousel-banners .carousel-text span{
+        right: 0;
+    }
+    .listing-collection-tile figure,#content .listing-summary .tileItem figure{
+        height: 250px;
+    }
+    #fullscreen-slider .carousel-banners .carousel-text span{
+        top: 60% !important;
+    }
 }
 @media (min-width: 768px) and (max-width: 979px){
-    .lascatalinas-listing .collection-item{
-        width: 49%;
+    #portal-logo{ 
+        top: 40px;
     }
-    .lascatalinas-listing .listing-collection-tile figure{
-        min-height:238px; 
+    .listing-summary .tileItem {
+        width: 47%;
+    }
+    .listing-collection-tile .collection-item{
+        width: 47%;
+    }
+    .listing-collection-tile figure img{
+        max-width: none;
+        width: auto;   
+        height: 100%;
     }
     #fullscreen-slider .carousel-banners .carousel-text{
         width: 680px;
@@ -360,13 +455,27 @@ table.listing tr.odd th{
     #main .portletWrapper .portletQuickSearch .portletItem label .label{
         font-size: 13px;  
     }
+    #fullscreen-slider .carousel-banners .carousel-text span{
+        display:none;
+    }
+    .listing-collection-tile figure,#content .listing-summary .tileItem figure{
+        height: 250px;
+    }
 }
 @media (min-width: 600px) and (max-width: 767px){
-    .lascatalinas-listing .collection-item{
-        width: 49%;
+    #portal-logo{ 
+        top: 10px;
     }
-    .lascatalinas-listing .listing-collection-tile figure{
-        min-height:248px; 
+    .listing-summary .tileItem {
+        width: 47%;
+    }
+    .listing-collection-tile .collection-item{
+        width: 47%;
+    }
+    .listing-collection-tile figure img{
+        max-width: none;
+        width: auto;   
+        height: 100%;
     }
     #fullscreen-slider .carousel-banners .carousel-text{
         display:none;
@@ -374,10 +483,27 @@ table.listing tr.odd th{
     #main .portletWrapper .portletQuickSearch .portletItem label .label{
         font-size: 16px;  
     }
+    .listing-collection-tile figure,#content .listing-summary .tileItem figure{
+        height: 250px;
+    }
 }
 @media (min-width: 481px) and (max-width: 599px){
-    .lascatalinas-listing .collection-item{
+    #portal-logo{ 
+        display:none;
+    }
+    .listing-summary .tileItem {
         width: 100%;
+        margin-right: 0 !important;
+    }
+    .listing-collection-tile .collection-item{
+        width: 100%;
+        margin-right: 0 !important;
+        text-align: center;
+    }
+    .listing-collection-tile figure img {
+        height: auto;
+        max-width: none;
+        width: auto;
     }
     #fullscreen-slider .carousel-banners .carousel-text{
         display:none;
@@ -387,8 +513,21 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 401px) and (max-width: 480px){
-    .lascatalinas-listing .collection-item{
+    #portal-logo{ 
+        display:none;
+    }
+    .listing-summary .tileItem {
         width: 100%;
+        margin-right: 0 !important;
+    }
+    .listing-collection-tile .collection-item{
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    .listing-collection-tile figure img {
+        height: auto;
+        max-width: none;
+        width: auto;
     }
     #fullscreen-slider .carousel-banners .carousel-text{
         display:none;
@@ -398,8 +537,21 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 321px) and (max-width: 400px){
-    .lascatalinas-listing .collection-item{
+    #portal-logo{ 
+        display:none;
+    }
+    .listing-summary .tileItem {
         width: 100%;
+        margin-right: 0 !important;
+    }
+    .listing-collection-tile .collection-item{
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    .listing-collection-tile figure img {
+        height: auto;
+        max-width: none;
+        width: auto;
     }
     #fullscreen-slider .carousel-banners .carousel-text{
         display:none;
@@ -409,8 +561,21 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 241px) and (max-width: 320px){
-    .lascatalinas-listing .collection-item{
+    #portal-logo{ 
+        display:none;
+    }
+    .listing-summary .tileItem {
         width: 100%;
+        margin-right: 0 !important;
+    }
+    .listing-collection-tile .collection-item{
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    .listing-collection-tile figure img {
+        height: auto;
+        max-width: none;
+        width: auto;
     }
     #fullscreen-slider .carousel-banners .carousel-text{
         display:none;
@@ -420,7 +585,20 @@ table.listing tr.odd th{
     }
 }
 @media (max-width: 240px){
-    .lascatalinas-listing .collection-item{
+    #portal-logo{ 
+        display:none;
+    }
+    .listing-summary .tileItem {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    .listing-collection-tile .collection-item{
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    .listing-collection-tile figure img {
+        height: auto;
+        max-width: none;
         width: 100%;
     }
     #fullscreen-slider .carousel-banners .carousel-text{

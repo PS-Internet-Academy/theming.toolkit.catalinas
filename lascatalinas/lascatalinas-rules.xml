@@ -7,6 +7,12 @@
     > 
     
     <append 
+        css:content="#listing-images"
+        css:theme="#portal-column-two"
+        method="raw"
+    />
+    
+    <append 
         css:content="#portal-searchbox"
         css:theme="#navibar"
         method="raw"

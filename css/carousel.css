@@ -72,26 +72,26 @@
 }
 @media (min-width: 980px) and (max-width:1199px){
     .carousel-banners,.carousel-banner,.carousel-banner img{
-        width:1199px !important;   
+        width:100% !important;   
     }
 }
 @media (min-width: 768px) and (max-width: 979px){
     .carousel-banners,.carousel-banner,.carousel-banner img{
-        width:1199px !important;   
+        width:100% !important;   
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
 .carousel-banners,.carousel-banner,.carousel-banner img{
-        width:1199px !important;   
+        width:100% !important;   
     }
 }
 @media (min-width: 481px) and (max-width: 599px){
     .carousel-banners,.carousel-banner,.carousel-banner img{
-        width:1199px !important;   
+        width:100% !important;   
     } 
 }
 @media (max-width: 480px){
     .carousel-banners,.carousel-banner,.carousel-banner img{
-        width:1199px !important;   
+        width:100% !important;   
     }
 }
