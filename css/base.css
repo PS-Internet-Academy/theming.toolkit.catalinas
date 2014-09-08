@@ -632,6 +632,12 @@ div.width-full{
     .listing-summary #search-form .form-row-sizes .field{
         width:32%; 
     }
+    div#portal-column-one.width-1\:4{
+        width: 22%;
+    }
+    div#portal-column-two.width-1\:4{
+        width: 35%;
+    }   
 }
 @media (min-width: 980px) and (max-width:1199px){ 
     #formfield-form-widgets-object_type .collapse .option,
@@ -1155,7 +1161,7 @@ div.width-full{
 }
 @media (min-width: 321px) and (max-width: 400px){
     .footer #doormat-container .doormatColumn{
-        width:100%;
+        width:96%;
         text-align:center;
     }
     #content .listing-summary dt{
@@ -1272,7 +1278,7 @@ div.width-full{
 }
 @media (min-width: 241px) and (max-width: 320px){
     .footer #doormat-container .doormatColumn{
-        width:100%;
+        width:96%;
         text-align:center;
     }
     #content .listing-summary dt{
@@ -1389,7 +1395,7 @@ div.width-full{
 }
 @media (max-width: 240px) {
     .footer #doormat-container .doormatColumn{
-        width:100%;
+        width:96%;
         text-align:center;
     }
     #content .listing-summary dt{

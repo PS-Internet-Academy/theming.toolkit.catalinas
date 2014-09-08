@@ -3,8 +3,7 @@
     xmlns="http://namespaces.plone.org/diazo"
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xi="http://www.w3.org/2001/XInclude"
-    > 
+    xmlns:xi="http://www.w3.org/2001/XInclude"> 
     
     <append 
         css:content="#listing-images"
@@ -19,13 +18,14 @@
     />
     
     <drop
-        css:content="#portal-searchbox"
-    />
+        css:content="#portal-searchbox"/>
     
     <append 
         css:content="#viewlet-above-content > div.carousel" 
         css:theme="#fullscreen-slider"  
         method="raw"
     />
+    
+    
     
 </rules>
