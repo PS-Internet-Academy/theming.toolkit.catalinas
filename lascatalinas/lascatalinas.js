@@ -98,6 +98,8 @@ function cover_color_box(){
         
     ( $(".workflow_status .item-body:contains('Active').length>0 " ) && $(".listing_type .item-body:contains('Residential Sale')" ) ).after('<div class="blue-bg-status">Sale</div>');
     
+    ( $(".workflow_status .item-body:contains('Active').length>0 " ) && $(".listing_type .item-body:contains('Land Listing')" ) ).after('<div class="blue-bg-status">Sale</div>');
+    
     ( $(".workflow_status .item-body:contains('Active').length>0 " ) && $(".listing_type .item-body:contains('Commercial Lease')" ) ).after('<div class="green-bg-status">Rental</div>');
 
     ( $(".workflow_status .item-body:contains('Active').length>0 " ) && $(".listing_type .item-body:contains('Residential Lease')" ) ).after('<div class="green-bg-status">Rental</div>');

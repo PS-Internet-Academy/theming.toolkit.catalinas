@@ -2,7 +2,9 @@
 .template-listing-detail .formTabs #fieldsetlegend-geographic-information{
     display:none;
 }
-
+#viewlet-below-content-body {
+    overflow: hidden;
+}
 #portal-searchbox .LSBox #searchGadget{
     height: 19px;
 }
