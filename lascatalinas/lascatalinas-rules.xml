@@ -5,6 +5,16 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xi="http://www.w3.org/2001/XInclude"> 
     
+    <replace 
+        css:content=".listing.detail p.documentDescription"
+        css:theme="##sec-agent-quote #sec-listing-long-description p"
+        method="raw"
+    />
+    
+    <drop
+        css:content="#agentquote"
+    />
+    
     <append 
         css:content="#listing-images"
         css:theme="#portal-column-two"

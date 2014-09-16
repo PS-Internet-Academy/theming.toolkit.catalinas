@@ -5,6 +5,17 @@
 #viewlet-below-content-body {
     overflow: hidden;
 }
+#listing-images div#galleria div.galleria-stage div.galleria-images div.galleria-image img{
+    height: auto !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-height: 100% !important;
+    min-width: 100% !important;
+    width: auto !important;
+}
+.visualclearnone{
+    clear:none;   
+}
 #portal-searchbox .LSBox #searchGadget{
     height: 19px;
 }
@@ -454,6 +465,18 @@ table.listing tr.odd th{
     font-family: Georgia, serif; 
     text-align:center;
 }
+.agent-contact-link{
+    background: none repeat scroll 0 0 orange;
+    line-height: 34px;
+    text-align: center;
+    width: 270px;   
+}
+.agent-contact-link a,.agent-contact-link a:hover{
+    font-family:Arial, Helvetica, sans-serif; 
+    color:#ffffff !important;
+    font-size:13px;
+    border: 0 none !important;
+}
 @media (min-width: 1200px){
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         width: 142px;
@@ -497,6 +520,10 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 980px) and (max-width:1199px){
+    .listing #listing-images {
+        position: static;
+        width: 100%;
+    }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         width: 142px;
     }
@@ -540,6 +567,10 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 768px) and (max-width: 979px){
+    .listing #listing-images {
+        position: static;
+        width: 100%;
+    }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         width: 142px;
     }
@@ -571,6 +602,10 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
+    .listing #listing-images {
+        position: static;
+        width: 100%;
+    }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         width: 98%;
     }
@@ -599,6 +634,10 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 481px) and (max-width: 599px){
+    .listing #listing-images {
+        position: static;
+        width: 100%;
+    }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         width: 98%;
     }
@@ -627,6 +666,10 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 401px) and (max-width: 480px){
+    .listing #listing-images {
+        position: static;
+        width: 100%;
+    }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         margin-left: 14%;
         width: 141px;
@@ -655,6 +698,10 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 321px) and (max-width: 400px){
+    .listing #listing-images {
+        position: static;
+        width: 100%;
+    }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         margin-left: 25%;
         width: 171px;
@@ -683,6 +730,10 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 241px) and (max-width: 320px){
+    .listing #listing-images {
+        position: static;
+        width: 100%;
+    }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         margin-left: 25%;
         width: 141px;
@@ -711,6 +762,10 @@ table.listing tr.odd th{
     }
 }
 @media (max-width: 240px){
+    .listing #listing-images {
+        position: static;
+        width: 100%;
+    }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         margin-left: 25%;
         width: 141px;

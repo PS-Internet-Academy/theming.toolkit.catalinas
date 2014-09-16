@@ -118,11 +118,17 @@ function portlet(){
     }
 }  
 
+function visualclearnone(){
+        $(".listing .visualClear").addClass('visualclearnone');
+} 
+
 $(document).ready(function () {
+    if($('#portal-column-two').length<1){
+        visualclearnone();
+    }
     if($('.workflow_status').length>0 && $('.listing_type').length>0) {
         cover_color_box();
     }  
-    
     if($('#fullscreen-slider').length>0){
         $("#fullscreen-slider").insertBefore("#fullbgnav");
     }
