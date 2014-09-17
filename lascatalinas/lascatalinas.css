@@ -13,9 +13,6 @@
     min-width: 100% !important;
     width: auto !important;
 }
-.visualclearnone{
-    clear:none;   
-}
 #portal-searchbox .LSBox #searchGadget{
     height: 19px;
 }
@@ -312,10 +309,7 @@ table.listing tr.odd th{
 }
 .galleria-container{
     border:0;   
-}
-#listing-info{
-    width:100%;
-}   
+}  
 .listing #listing-info dl.workflow{
     border: 0;
     margin-bottom: 0;
@@ -471,11 +465,49 @@ table.listing tr.odd th{
     text-align: center;
     width: 270px;   
 }
-.agent-contact-link a,.agent-contact-link a:hover{
+#content .agent-contact-link a,.agent-contact-link a:hover{
     font-family:Arial, Helvetica, sans-serif; 
     color:#ffffff !important;
     font-size:13px;
     border: 0 none !important;
+}
+#content .listing.detail ul.formTabs li a{
+    display:none;   
+}
+#content .listing.detail ul.formTabs li a#fieldsetlegend-listing-details,
+#content .listing.detail ul.formTabs li a#fieldsetlegend-features-amenities,
+#content .listing.detail ul.formTabs li a#fieldsetlegend-financial-information{
+    display:inline-block;   
+}
+#listing-details #fieldset-listing-details table.listing tbody tr,
+#listing-details #fieldset-financial-information table.listing tbody tr{
+    display:none;   
+}
+#listing-details #fieldset-listing-details table.listing tbody tr.bedrooms,
+#listing-details #fieldset-listing-details table.listing tbody tr.baths,
+#listing-details #fieldset-listing-details table.listing tbody tr.half_baths,
+#listing-details #fieldset-listing-details table.listing tbody tr.stories ,
+#listing-details #fieldset-listing-details table.listing tbody tr.living_area ,
+#listing-details #fieldset-listing-details table.listing tbody tr.total_under_roof_area,
+#listing-details #fieldset-listing-details table.listing tbody tr.lot_size,
+#listing-details #fieldset-listing-details table.listing tbody tr.flooring_type_meta,
+#listing-details #fieldset-listing-details table.listing tbody tr.construction_status,
+#listing-details #fieldset-listing-details table.listing tbody tr.construction_status_comment,
+#listing-details #fieldset-listing-details table.listing tbody tr.construction_type,
+#listing-details #fieldset-listing-details table.listing tbody tr.year_built,
+#listing-details #fieldset-listing-details table.listing tbody tr.appliances,
+#listing-details #fieldset-listing-details table.listing tbody tr.air_condition_meta,
+#listing-details #fieldset-listing-details table.listing tbody tr.furnished_meta,
+#listing-details #fieldset-listing-details table.listing tbody tr.pool_meta,
+#listing-details #fieldset-listing-details table.listing tbody tr.jacuzzi_meta,
+#listing-details #fieldset-listing-details table.listing tbody tr.telephone,
+#listing-details #fieldset-listing-details table.listing tbody tr.internet_meta,
+#listing-details #fieldset-listing-details table.listing tbody tr.television_meta,
+#listing-details #fieldset-financial-information table.listing tbody tr.price_per_roof_area,
+#listing-details #fieldset-financial-information table.listing tbody tr.price_per_sqm,
+#listing-details #fieldset-financial-information table.listing tbody tr.price_asking,
+#listing-details #fieldset-financial-information table.listing tbody tr.ownership_type_meta{
+    display: table-row;
 }
 @media (min-width: 1200px){
     #footer-wrapper #doormat-container .column-3 p.footer_button{
@@ -518,10 +550,13 @@ table.listing tr.odd th{
     div#portal-column-two.width-1\:4{
         width: 29%;
     }
+    #listing-info{
+        width:45%;
+    } 
 }
 @media (min-width: 980px) and (max-width:1199px){
     .listing #listing-images {
-        position: static;
+        position: absolute;
         width: 100%;
     }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
@@ -568,7 +603,7 @@ table.listing tr.odd th{
 }
 @media (min-width: 768px) and (max-width: 979px){
     .listing #listing-images {
-        position: static;
+        position: absolute;
         width: 100%;
     }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
@@ -603,7 +638,7 @@ table.listing tr.odd th{
 }
 @media (min-width: 600px) and (max-width: 767px){
     .listing #listing-images {
-        position: static;
+        position: absolute;
         width: 100%;
     }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
@@ -635,7 +670,7 @@ table.listing tr.odd th{
 }
 @media (min-width: 481px) and (max-width: 599px){
     .listing #listing-images {
-        position: static;
+        position: absolute;
         width: 100%;
     }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
@@ -667,7 +702,7 @@ table.listing tr.odd th{
 }
 @media (min-width: 401px) and (max-width: 480px){
     .listing #listing-images {
-        position: static;
+        position: absolute;
         width: 100%;
     }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
@@ -699,7 +734,7 @@ table.listing tr.odd th{
 }
 @media (min-width: 321px) and (max-width: 400px){
     .listing #listing-images {
-        position: static;
+        position: absolute;
         width: 100%;
     }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
@@ -731,7 +766,7 @@ table.listing tr.odd th{
 }
 @media (min-width: 241px) and (max-width: 320px){
     .listing #listing-images {
-        position: static;
+        position: absolute;
         width: 100%;
     }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
@@ -763,7 +798,7 @@ table.listing tr.odd th{
 }
 @media (max-width: 240px){
     .listing #listing-images {
-        position: static;
+        position: absolute;
         width: 100%;
     }
     #footer-wrapper #doormat-container .column-3 p.footer_button{

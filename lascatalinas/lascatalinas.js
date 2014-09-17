@@ -37,7 +37,6 @@ function map_listing_data(){
   return true;
 }
 
-
 function responsive_carousel(){
     //set new height for responsive carousel
     $('#fullscreen-slider .carousel').each(function( index ) {
@@ -84,23 +83,7 @@ function title_property(){
 );}
 
 function cover_color_box(){
-    /*
-    if ( $(".workflow_status .item-body:contains('Active')" ) && $(".listing_type .item-body:contains('Commercial Sale')" ) ) {
-        $('.collection-item figure').after('<p class="blue-bg-status">Sale</p>');
-    }
-    else if ( $(".workflow_status .item-body:contains('Active')" ) && $(".listing_type .item-body:contains('Residential Sale')" ) ) {
-        $('.collection-item figure').after('<p class="blue-bg-status">Sale</p>');
-    }
-    else if ( $(".workflow_status .item-body:contains('Active')" ) && $(".listing_type .item-body:contains('Commercial Lease')" ) ) {
-        $('.collection-item figure').after('<p class="green-bg-status">Rental</p>');
-    }
-    else if ( $(".workflow_status .item-body:contains('Active')" ) && $(".listing_type .item-body:contains('Residential Lease')" ) ) {
-        $('.collection-item figure').after('<p class="green-bg-status">Rental</p>');
-    }
-    else{
-        $('.collection-item figure').after('<p class="red-bg-status">Sold</p>');
-    }
-*/
+    
     ( $(".workflow_status .item-body:contains('Active').length>0 " ) && $(".listing_type .item-body:contains('Commercial Sale')" ) ).after('<div class="blue-bg-status">Sale</div>');
         
     ( $(".workflow_status .item-body:contains('Active').length>0 " ) && $(".listing_type .item-body:contains('Residential Sale')" ) ).after('<div class="blue-bg-status">Sale</div>');
@@ -115,7 +98,6 @@ function cover_color_box(){
 
 }  
 
-
 function portlet(){
     if($('#portal-column-one').length>0 && $('#portal-column-two').length>0) {
         $("#portal-column-content #content .collection-item").addClass('full-column');
@@ -124,16 +106,13 @@ function portlet(){
         $("#portal-column-content #content .collection-item").addClass('small-column');
     }
 }  
-
-function visualclearnone(){
-        $(".listing .visualClear").addClass('visualclearnone');
-} 
-
+function pricing(){
+    $("#fieldsetlegend-financial-information").text("Pricing");
+}
 
 $(document).ready(function () {
-    
-    if($('#portal-column-two').length<1){
-        //visualclearnone();
+    if($('#fieldsetlegend-financial-information').length>0 ){
+        pricing();
     }
     if($('.workflow_status').length>0 && $('.listing_type').length>0) {
         cover_color_box();
@@ -150,8 +129,9 @@ $(document).ready(function () {
    
     //move listing detail gallery to right portlet
     if($('.listing.detail #listing-images').length>0){
-        map_listing_data();
+        
         if ($('#portal-column-two').length>0){
+            map_listing_data();
           move_listing_gallery();
         }       
     } 
