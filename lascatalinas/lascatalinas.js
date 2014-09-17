@@ -7,22 +7,29 @@ function move_listing_gallery(){
   $("#content #listing-images").remove();
   
 }
-function map_listing_data(obj){
+function map_listing_data(){
  //use data input to give back a easy to access array for mapping
   dict=[];
-  
+
   dict.price= $('dl.price dd').html();
-  dict.propertytype= $('dl.workflow')[0].children[3].innerHTML;
-  info=$("#listing-info");
-  info_content=$(info[0].children[3]);
-  dict.bed_bath=info_content[0].children[1].innerHTML;
-  dict.lotsize=info_content[0].children[7].innerHTML;
+  dict.propertytype= $('#listing-info dd.object_type').html();
+  dict.bed_bath=$('#listing-info dd.beds_baths').html();
+  dict.lotsize=$('#listing-info dd.lot_size').html();
   
   html_string = '<div class="short_info">';
-  html_string += '<span class="label type"><b>TYPE</b>&nbsp;&nbsp;</span><span class="value type">'+dict.propertytype+'&nbsp;&nbsp;|<span>';
-  html_string += '<span class="label bed_bath"><b>BED/ BATH</b>&nbsp;&nbsp;</span><span class="value bed_bath">'+dict.bed_bath+'&nbsp;&nbsp;|<span>';
-  html_string += '<span class="label size"><b>SIZE</b>&nbsp;&nbsp;</span><span class="value size">'+dict.lotsize+'&nbsp;&nbsp;|<span>';
-  html_string += '<span class="label price"><b>PRICE</b>&nbsp;&nbsp;</span><span class="value price">'+dict.price+'&nbsp;&nbsp;|<span>';
+  if(dict.propertytype!==null){
+      html_string += '<span class="label type"><b>TYPE</b>&nbsp;&nbsp;</span><span class="value type">'+dict.propertytype+'&nbsp;&nbsp;|<span>';
+  }
+  if(dict.bed_bath!==null){
+      html_string += '<span class="label bed_bath"><b>BED/ BATH</b>&nbsp;&nbsp;</span><span class="value bed_bath">'+dict.bed_bath+'&nbsp;&nbsp;|<span>';
+  }
+  if(dict.lotsize!==null){
+      html_string += '<span class="label size"><b>SIZE</b>&nbsp;&nbsp;</span><span class="value size">'+dict.lotsize+'&nbsp;&nbsp;|<span>';
+  }
+  if(dict.price!==null){
+    html_string += '<span class="label price"><b>PRICE</b>&nbsp;&nbsp;</span><span class="value price">'+dict.price+'&nbsp;&nbsp;|<span>';
+  }
+  
   html_string += '</div>';
   
   $("#listing-info").before(html_string);
@@ -122,9 +129,11 @@ function visualclearnone(){
         $(".listing .visualClear").addClass('visualclearnone');
 } 
 
+
 $(document).ready(function () {
+    
     if($('#portal-column-two').length<1){
-        visualclearnone();
+        //visualclearnone();
     }
     if($('.workflow_status').length>0 && $('.listing_type').length>0) {
         cover_color_box();
@@ -138,9 +147,9 @@ $(document).ready(function () {
     if($('.portletQuickSearch').length>0){
         clickshow_option();
     }
-    
+   
     //move listing detail gallery to right portlet
-    if($('.template-listing-detail').length>0){
+    if($('.listing.detail #listing-images').length>0){
         map_listing_data();
         if ($('#portal-column-two').length>0){
           move_listing_gallery();
