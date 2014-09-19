@@ -38,6 +38,7 @@ function map_listing_data(){
   if(dict.pool!==null){
     html_string += '<span class="label pool"><b>POOL</b>&nbsp;&nbsp;</span><span class="value pool">'+dict.pool+'&nbsp;&nbsp;|<span>';
   }
+  
   html_string += '</div>';
   
   $("#listing-info").before(html_string);
@@ -78,8 +79,6 @@ function descriptionBox(){
       $( ".more_button" ).show();
       $( ".less_button" ).hide();
     });
-    
-    
 }
 
 function responsive_carousel(){
@@ -129,7 +128,6 @@ function title_property(){
 
 //to be replaced by simple css - content is prepared now
 function cover_color_box(){
-    
     ( $(".workflow_status .item-body:contains('Active').length>0 " ) && $(".listing_type .item-body:contains('Commercial Sale')" ) ).after('<div class="blue-bg-status">Sale</div>');
         
     ( $(".workflow_status .item-body:contains('Active').length>0 " ) && $(".listing_type .item-body:contains('Residential Sale')" ) ).after('<div class="blue-bg-status">Sale</div>');
@@ -151,7 +149,8 @@ function portlet(){
     else{
         $("#portal-column-content #content .collection-item").addClass('small-column');
     }
-}  
+}
+
 function pricing(){
     $("#fieldsetlegend-financial-information").text("Pricing");
 }
@@ -174,17 +173,17 @@ $(document).ready(function () {
     }
    
     //move listing detail gallery to right portlet
-    if($('.listing.detail #listing-images').length>0){
+    if($('.listing.detail').length>0){
+         map_listing_data();
         
-        if ($('#portal-column-two').length>0){
-            map_listing_data();
+        if($('.descriptionBox').length>0){
+          descriptionBox();
+        }
+        
+        if ( $('#listing-images').length>0 && $('#portal-column-two').length>0){
           move_listing_gallery();
         }       
-    }
-    //limit the height of the description box in the listing details
-    if($('.listing.detail .descriptionBox').length>0){
-        descriptionBox();
-    }
+    } 
     
     if($('#portal-columns').length>0){
         portlet();
@@ -195,12 +194,15 @@ $(document).ready(function () {
     if($('#fullscreen-slider .carousel').length>0){
         responsive_carousel();
     }
+    
+    
     $(window).resize(function() {
         if($('#fullscreen-slider .carousel').length>0){
             responsive_carousel();
         } 
     });
-    
+
+    });
 
     $( window ).load(function() {
         if($('#fullscreen-slider .carousel').length>0){
