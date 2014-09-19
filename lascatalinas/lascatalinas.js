@@ -45,6 +45,43 @@ function map_listing_data(){
   return true;
 }
 
+function descriptionBox(){
+    //limit height of description
+    box=$('.listing.detail .descriptionBox');
+    
+    if(box.height() > 81){
+        
+      box.css({
+        "height": "81px",
+        "overflow": "hidden"
+      });
+      
+      box.addClass('closed');
+      box.after('<div class="more_button"> + More</div><div style="display:none;" class="less_button"> - Less</div>');
+    }
+    $( ".more_button" ).click(function() {
+      box.css({
+        "height": "auto",
+        "overflow": "auto"
+      });
+      box.removeClass('closed').addClass('open');
+      $( ".more_button" ).hide();
+      $( ".less_button" ).show();
+    });
+    
+    $( ".less_button" ).click(function() {
+      box.css({
+        "height": "81px",
+        "overflow": "hidden"
+      });
+      box.removeClass('open').addClass('closed');
+      $( ".more_button" ).show();
+      $( ".less_button" ).hide();
+    });
+    
+    
+}
+
 function responsive_carousel(){
     //set new height for responsive carousel
     $('#fullscreen-slider .carousel').each(function( index ) {
@@ -90,6 +127,7 @@ function title_property(){
     }
 );}
 
+//to be replaced by simple css - content is prepared now
 function cover_color_box(){
     
     ( $(".workflow_status .item-body:contains('Active').length>0 " ) && $(".listing_type .item-body:contains('Commercial Sale')" ) ).after('<div class="blue-bg-status">Sale</div>');
@@ -142,7 +180,12 @@ $(document).ready(function () {
             map_listing_data();
           move_listing_gallery();
         }       
-    } 
+    }
+    //limit the height of the description box in the listing details
+    if($('.listing.detail .descriptionBox').length>0){
+        descriptionBox();
+    }
+    
     if($('#portal-columns').length>0){
         portlet();
     }
@@ -158,10 +201,6 @@ $(document).ready(function () {
         } 
     });
     
-    if($('.portlet-static-las-catalinas-ocean-living-at-its-finest-in-costa').length>0){
-        $('#portal-logo').hide();
-        }
-    });
 
     $( window ).load(function() {
         if($('#fullscreen-slider .carousel').length>0){
