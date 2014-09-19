@@ -16,6 +16,12 @@ function map_listing_data(){
   dict.bed_bath=$('#listing-info dd.beds_baths').html();
   dict.lotsize=$('#listing-info dd.lot_size').html();
   
+  pool_text = $(".pool_meta td").html();
+  if(pool_text !='No'){
+      pool_text ='Yes';
+  }
+  dict.pool= pool_text;
+  
   html_string = '<div class="short_info">';
   if(dict.propertytype!==null){
       html_string += '<span class="label type"><b>TYPE</b>&nbsp;&nbsp;</span><span class="value type">'+dict.propertytype+'&nbsp;&nbsp;|<span>';
@@ -29,7 +35,9 @@ function map_listing_data(){
   if(dict.price!==null){
     html_string += '<span class="label price"><b>PRICE</b>&nbsp;&nbsp;</span><span class="value price">'+dict.price+'&nbsp;&nbsp;|<span>';
   }
-  
+  if(dict.pool!==null){
+    html_string += '<span class="label pool"><b>POOL</b>&nbsp;&nbsp;</span><span class="value pool">'+dict.pool+'&nbsp;&nbsp;|<span>';
+  }
   html_string += '</div>';
   
   $("#listing-info").before(html_string);
