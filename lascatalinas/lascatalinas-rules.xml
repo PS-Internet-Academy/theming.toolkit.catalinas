@@ -7,7 +7,7 @@
     
     <replace 
         css:content=".listing.detail p.documentDescription"
-        css:theme="##sec-agent-quote #sec-listing-long-description p"
+        css:theme="#sec-agent-quote #sec-listing-long-description p"
         method="raw"
     />
     

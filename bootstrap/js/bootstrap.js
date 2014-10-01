@@ -438,7 +438,7 @@
  /* COLLAPSE PUBLIC CLASS DEFINITION
   * ================================ */
 
-  var Collapse = function (element, options) {
+ var Collapse = function (element, options) {
     this.$element = $(element)
     this.options = $.extend({}, $.fn.collapse.defaults, options)
 
@@ -525,7 +525,7 @@
         complete()
     }
 
-  , toggle: function () {
+ // , toggle: function () {
       this[this.$element.hasClass('in') ? 'hide' : 'show']()
     }
 

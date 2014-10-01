@@ -7,6 +7,24 @@ function move_listing_gallery(){
   $("#content #listing-images").remove();
   
 }
+
+function enhance_listingbar(){
+    //remove the ugly [ 1 ] notation and give it a class
+    $('.listingBar').html(function(i,html){
+        foo = html.replace('[','<span class="active">').replace(']','</span>');
+        return foo;
+});
+}
+
+function pimp_startpage(){
+    
+    $(".subsection-latest-listings-1 #portal-column-two").remove();
+    $(".subsection-latest-listings-1 .tileItem.full-column").removeClass('full-column');
+    $(".subsection-latest-listings-1 #portal-column-content").removeClass().addClass("cell width-3:4 position-1:4");
+
+    
+}
+
 function map_listing_data(){
  //use data input to give back a easy to access array for mapping
   dict=[];
@@ -35,6 +53,7 @@ function map_listing_data(){
   if(dict.price!==null){
     html_string += '<span class="label price"><b>PRICE</b>&nbsp;&nbsp;</span><span class="value price">'+dict.price+'&nbsp;&nbsp;|<span>';
   }
+  dict.pool=null;
   if(dict.pool!==null){
     html_string += '<span class="label pool"><b>POOL</b>&nbsp;&nbsp;</span><span class="value pool">'+dict.pool+'&nbsp;&nbsp;|<span>';
   }
@@ -145,9 +164,11 @@ function cover_color_box(){
 function portlet(){
     if($('#portal-column-one').length>0 && $('#portal-column-two').length>0) {
         $("#portal-column-content #content .collection-item").addClass('full-column');
+        $("#portal-column-content #content .tileItem ").addClass('full-column');
     }
     else{
         $("#portal-column-content #content .collection-item").addClass('small-column');
+        $("#portal-column-content #content .tileItem").addClass('small-column');
     }
 }
 
@@ -156,6 +177,12 @@ function pricing(){
 }
 
 $(document).ready(function () {
+    if($('.subsection-latest-listings-1').length>0 && $('.template-zope-interface-interface-listing-detail').length===0){
+        pimp_startpage();
+    }
+    if($('.listingBar').length>0 ){
+        enhance_listingbar();
+    }
     if($('#fieldsetlegend-financial-information').length>0 ){
         pricing();
     }
