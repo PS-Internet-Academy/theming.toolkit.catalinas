@@ -1298,3 +1298,61 @@ table.listing tr.odd th{
         font-size: 16px;  
     }
 }
+
+/* Content ploneCustom.css*/
+.subsection-latest-listings #portal-logo,
+.subsection-latest-listings-1 #portal-logo{
+  display:none;
+}
+
+body #footer-wrapper #doormat-container  p.footer_button {
+  background-color: #00a15f;
+  font-size:18px;
+  text-align:center;
+  padding:1em 0;
+}
+
+body #footer-wrapper #doormat-container  p.footer_button a{
+  color:#fff !important;
+  font-size:18px;
+
+}
+#footer-wrapper #doormat-container .doormatColumn.column-3  p.footer_button{
+  text-align:left;
+  padding:5px;
+}
+
+/*Hide header for listing details and show standard image*/
+.template-zope-interface-interface-listing-detail #fullscreen-slider .carousel,
+.template-listing-detail #fullscreen-slider .carousel {
+  display:none;
+}
+/*by default don't show scalable background image*/
+#fullscreen-slider .sliderbackgroundimage{
+  display:none;
+}
+/*show scalable Background Image instead Carousel on ListingDetails*/
+.template-zope-interface-interface-listing-detail #fullscreen-slider .sliderbackgroundimage,
+.template-listing-detail #fullscreen-slider .sliderbackgroundimage {
+  display:block;
+  max-width:100%;
+  height:auto;
+  width:100%;
+}
+.template-zope-interface-interface-listing-detail .position-0 .portlet-static,
+.template-listing-detail .position-0 .portlet-static{
+  display:none;
+}
+
+.template-zope-interface-interface-listing-detail.subsection-latest-listings-1 #portal-logo,
+.template-listing-detail.subsection-latest-listings-1 #portal-logo
+{
+  display:block;
+  top:0;
+  max-width:34%;
+}
+.template-zope-interface-interface-listing-detail.subsection-latest-listings-1 #portal-logo img,
+.template-listing-detail.subsection-latest-listings-1 #portal-logo img{
+  height:auto;
+  max-width:90%;
+}
