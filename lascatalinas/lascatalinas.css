@@ -1,3 +1,7 @@
+#portal-logo img{
+    padding: 5%;
+    margin:0;
+}
 #content .listing-summary section{
     text-align: left;
     width: 100%;
@@ -12,7 +16,7 @@
      padding: 0 !important;
 }
 #content .listing-summary section .row .value{
-    left: 122px;
+    left: 100px;
     position: absolute;
 }
 .template-listing-detail .formTabs #fieldsetlegend-infrastructure,
@@ -80,9 +84,9 @@
 #content .listing-summary figure .quick_preview_button a,
 #content .listing-summary figure .quick_preview_button a:hover{
     color:#e2e2e2 !important;
-    font-size:18px;
+    font-size:16px;
     line-height: 32px;
-    padding: 0 10px 0 25px !important;
+    padding: 6px 10px 6px 25px !important;
     background-image: url("../img/quick-preview-icon.png");
     background-position: left center;
     background-repeat: no-repeat;
@@ -93,7 +97,7 @@
     position: absolute;
     color: #fff;
     font-family: Arial,Helvetica,sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5em;
     text-align: center;
     width: 90px;
@@ -112,16 +116,22 @@
     background-color: #ef4034;   
 }
 div.pp_pic_holder{
-    width: 800px !important;   
+    height: 595px !important;
+    left: 360px !important;
+    top: 68px !important;
+    width: 800px !important;
+    position: fixed;
 }
 .pp_content{
-    height: auto !important;
+    height: 500px !important;
     overflow: auto;
     padding: 3%;
     width: 94% !important;  
 }
 div.pp_default .pp_content_container .pp_details{
-    width:100% !important;   
+    bottom: 22px;
+    position: absolute;
+    width: 91% !important;  
 }
 .pp_content .listing_title{
     float: right;
@@ -774,6 +784,12 @@ table.listing tr.odd th{
     } 
 }
 @media (min-width: 980px) and (max-width:1199px){
+    #content .listing-summary section .row .value {
+        float: right;
+        left: 100px;
+        position: static !important;
+        width: 55%;
+    }
     .listing-summary figure .quick_preview_button,.listing-summary figure .status_box{
         right: 0;
     }
