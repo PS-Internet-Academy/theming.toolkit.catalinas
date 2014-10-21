@@ -1,6 +1,8 @@
 #portal-logo img{
     padding: 5%;
     margin:0;
+    height:auto;
+    max-width:90%;
 }
 #content .listing-summary section{
     text-align: left;
@@ -25,10 +27,6 @@
 }
 .listing-summary #search-form form .form-row-other .field span.option{
     width: auto !important;
-}
-.listing-summary #search-form form .form-row-other .field span.option label span.label{
-    position: relative;
-    top: -2px;
 }
 #listing-search #search-form #show-form a{
     font-size: 13px;
@@ -480,6 +478,7 @@ div.listingBar {
 #fullscreen-slider .carousel-pager{
     position: absolute;
     width:100%;
+    bottom: 10px;
 }   
 #portal-logo{
     background:#ffffff;   
@@ -514,6 +513,7 @@ table.listing tr.odd th{
 }
 .galleria-container{
     border:0;   
+    width: auto !important;
 }  
 .listing #listing-info dl.workflow{
     border: 0;
@@ -725,6 +725,44 @@ table.listing tr.odd th{
 .listing-summary figure .quick_preview_button,.listing-summary figure .status_box{
     padding-left: 4px;
 }
+#portal-logo{ 
+    display:block;
+    top:0;
+    max-width:34%;
+}
+.listing-summary #search-form .form-row-beds-baths .field .separator, .listing-summary #search-form .form-row-sizes .field .separator {
+    vertical-align: sub;
+    line-height: 28px;
+}
+body input[type="checkbox"] {
+    margin: 0 5px 2px 3px;
+}
+body input[type="radio"] {
+    margin: 2px 5px 1px 3px;
+}
+.portletQuickSearch .form-row-beds-baths  select,
+.portletQuickSearch .form-row-sizes  select {
+    text-align: center;
+    width: 49%;
+}
+.portletQuickSearch #formfield-form-widgets-price_min {
+    margin-right: 1%;
+    width: 49%;
+}
+.portletQuickSearch #formfield-form-widgets-price_max {
+    width: 49%;
+}
+#main .portletWrapper .portletQuickSearch .portletItem label .label {
+    padding: 0;
+    white-space: normal;
+}
+#main .portletWrapper .portletQuickSearch .portletItem .option label{
+    width: 88%;
+    margin-left: 4px;
+}
+.galleria-container img {
+    height: auto !important;
+}
 @media (min-width: 1200px){
     .listing-summary figure .quick_preview_button,.listing-summary figure .status_box{
         right: 0;
@@ -735,9 +773,6 @@ table.listing tr.odd th{
     }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         width: 142px;
-    }
-    #portal-logo{ 
-        top: 75px;
     }
     .listing-summary .tileItem {
         width: 30%;
@@ -803,9 +838,6 @@ table.listing tr.odd th{
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         width: 142px;
     }
-    #portal-logo{ 
-        top: 75px;
-    }
     .listing-summary .tileItem {
         width: 47%;
     }
@@ -857,7 +889,7 @@ table.listing tr.odd th{
 }
 @media (min-width: 768px) and (max-width: 979px){
     .listing-summary figure .quick_preview_button,.listing-summary figure .status_box{
-        right: 149px;
+        right: 0;
     }
     .listing-collection-tile .collection-item.full-column,
     .listing-summary .tileItem.full-column,
@@ -908,9 +940,6 @@ table.listing tr.odd th{
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         width: 142px;
     }
-    #portal-logo{ 
-        top: 40px;
-    }
     .listing-summary .tileItem {
         width: 47%;
         min-height: 350px;
@@ -937,6 +966,26 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
+    .portletFilterSearch #formfield-form-widgets-beds .option{
+        width:50%;
+        float:left;
+    }
+    #formfield-form-widgets-price_min{
+        width:49%;
+        float:left;
+        clear: none;
+    }
+    #formfield-form-widgets-price_max{
+        width:49%;
+        float:right; 
+        clear: none;
+    }
+    .form-row-listing-type .field span.option {
+        width: 49%;
+    }
+    #main .portletWrapper .portletQuickSearch .portletItem input[type="checkbox"] {
+        vertical-align: top;
+    }
     .navbar .nav{
         width:100% !important;   
     }
@@ -973,9 +1022,6 @@ table.listing tr.odd th{
     }
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         width: 98%;
-    }
-    #portal-logo{ 
-        top: 10px;
     }
     .listing-summary .tileItem {
         float: none;
@@ -1001,6 +1047,26 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 481px) and (max-width: 599px){
+    .portletFilterSearch #formfield-form-widgets-beds .option{
+        width:50%;
+        float:left;
+    }
+    #formfield-form-widgets-price_min{
+        width:49%;
+        float:left;
+        clear: none;
+    }
+    #formfield-form-widgets-price_max{
+        width:49%;
+        float:right; 
+        clear: none;
+    }
+    .form-row-listing-type .field span.option {
+        width: 49%;
+    }
+    #main .portletWrapper .portletQuickSearch .portletItem input[type="checkbox"] {
+        vertical-align: top;
+    }
     .navbar .nav{
         width:100% !important;   
     }
@@ -1038,9 +1104,6 @@ table.listing tr.odd th{
     #footer-wrapper #doormat-container .column-3 p.footer_button{
         width: 98%;
     }
-    #portal-logo{ 
-        display:none;
-    }
     .listing-summary .tileItem {
         float: none;
         margin: 0 auto 1em !important;
@@ -1064,6 +1127,26 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 401px) and (max-width: 480px){
+    .portletFilterSearch #formfield-form-widgets-beds .option{
+        width:50%;
+        float:left;
+    }
+    #formfield-form-widgets-price_min{
+        width:49%;
+        float:left;
+        clear: none;
+    }
+    #formfield-form-widgets-price_max{
+        width:49%;
+        float:right; 
+        clear: none;
+    }
+    .form-row-listing-type .field span.option {
+        width: 49%;
+    }
+    #main .portletWrapper .portletQuickSearch .portletItem input[type="checkbox"] {
+        vertical-align: top;
+    }
     .navbar .nav{
         width:100% !important;   
     }
@@ -1102,9 +1185,6 @@ table.listing tr.odd th{
         margin-left: 14%;
         width: 141px;
     }
-    #portal-logo{ 
-        display:none;
-    }
     .listing-summary .tileItem {
         float: none;
         margin: 0 auto 1em !important;
@@ -1127,6 +1207,30 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 321px) and (max-width: 400px){
+    .portletFilterSearch #formfield-form-widgets-beds .option{
+        width:50%;
+        float:left;
+    }
+    #formfield-form-widgets-price_min{
+        width:49%;
+        float:left;
+        clear: none;
+    }
+    #formfield-form-widgets-price_max{
+        width:49%;
+        float:right; 
+        clear: none;
+    }
+    #main .portletWrapper .portletQuickSearch .portletItem .option label{
+        width: 80% !important;
+        margin-left: 4px;
+    }
+    .form-row-listing-type .field span.option {
+        width: 49%;
+    }
+    #main .portletWrapper .portletQuickSearch .portletItem input[type="checkbox"] {
+        vertical-align: top;
+    }
     .navbar .nav{
         width:100% !important;   
     }
@@ -1165,9 +1269,6 @@ table.listing tr.odd th{
         margin-left: 25%;
         width: 171px;
     }
-    #portal-logo{ 
-        display:none;
-    }
     .listing-summary .tileItem {
         width: 100%;
         margin-right: 0 !important;
@@ -1192,6 +1293,37 @@ table.listing tr.odd th{
     }
 }
 @media (min-width: 241px) and (max-width: 320px){
+    .portletFilterSearch #formfield-form-widgets-beds .option{
+        width:50%;
+        float:left;
+    }
+    #formfield-form-widgets-object_type .option,
+    #formfield-form-widgets-location_type .option,
+    #formfield-form-widgets-geographic_type .option,
+    #formfield-form-widgets-view_type .option,
+    #formfield-form-widgets-ownership_type .option{
+        width:100% !important;   
+    }
+    #main .portletWrapper .portletQuickSearch .portletItem .option label{
+        width: 80% !important;
+        margin-left: 4px;
+    }
+    .form-row-listing-type .field span.option {
+        width: 100%;
+    }
+    #main .portletWrapper .portletQuickSearch .portletItem input[type="checkbox"] {
+        vertical-align: top;
+    }
+    #portal-logo{ 
+        margin: 1.1em 0 !important;
+    }
+    #fullscreen-slider .carousel-pager{
+        bottom:0 !important;
+    }   
+    #fullscreen-slider .carousel .carousel-pager-item {
+        height: 8px !important;
+        width: 8px !important;
+    }
     .navbar .nav{
         width:100% !important;   
     }
@@ -1230,9 +1362,6 @@ table.listing tr.odd th{
         margin-left: 25%;
         width: 141px;
     }
-    #portal-logo{ 
-        display:none;
-    }
     .listing-summary .tileItem {
         width: 100%;
         margin-right: 0 !important;
@@ -1257,6 +1386,34 @@ table.listing tr.odd th{
     }
 }
 @media (max-width: 240px){
+    .portletFilterSearch #formfield-form-widgets-beds .option{
+        width:50%;
+        float:left;
+    }
+    #formfield-form-widgets-object_type .option,
+    #formfield-form-widgets-location_type .option,
+    #formfield-form-widgets-geographic_type .option,
+    #formfield-form-widgets-view_type .option,
+    #formfield-form-widgets-ownership_type .option{
+        width:100% !important;   
+    }
+    #main .portletWrapper .portletQuickSearch .portletItem .option label{
+        width: 80% !important;
+        margin-left: 4px;
+    }
+    .form-row-listing-type .field span.option {
+        width: 100%;
+    }
+    #portal-logo{ 
+        margin: 1em 0 !important;
+    }
+    #fullscreen-slider .carousel-pager{
+        bottom:0 !important;
+    }   
+    #fullscreen-slider .carousel .carousel-pager-item {
+        height: 8px !important;
+        width: 8px !important;
+    }
     .navbar .nav{
         width:100% !important;   
     }
@@ -1291,9 +1448,6 @@ table.listing tr.odd th{
         margin-left: 25%;
         width: 141px;
     }
-    #portal-logo{ 
-        display:none;
-    }
     .listing-summary .tileItem {
         width: 100%;
         margin-right: 0 !important;
@@ -1313,62 +1467,4 @@ table.listing tr.odd th{
     #main .portletWrapper .portletQuickSearch .portletItem label .label{
         font-size: 16px;  
     }
-}
-
-/* Content ploneCustom.css*/
-.subsection-latest-listings #portal-logo,
-.subsection-latest-listings-1 #portal-logo{
-  display:none;
-}
-
-body #footer-wrapper #doormat-container  p.footer_button {
-  background-color: #00a15f;
-  font-size:18px;
-  text-align:center;
-  padding:1em 0;
-}
-
-body #footer-wrapper #doormat-container  p.footer_button a{
-  color:#fff !important;
-  font-size:18px;
-
-}
-#footer-wrapper #doormat-container .doormatColumn.column-3  p.footer_button{
-  text-align:left;
-  padding:5px;
-}
-
-/*Hide header for listing details and show standard image*/
-.template-zope-interface-interface-listing-detail #fullscreen-slider .carousel,
-.template-listing-detail #fullscreen-slider .carousel {
-  display:none;
-}
-/*by default don't show scalable background image*/
-#fullscreen-slider .sliderbackgroundimage{
-  display:none;
-}
-/*show scalable Background Image instead Carousel on ListingDetails*/
-.template-zope-interface-interface-listing-detail #fullscreen-slider .sliderbackgroundimage,
-.template-listing-detail #fullscreen-slider .sliderbackgroundimage {
-  display:block;
-  max-width:100%;
-  height:auto;
-  width:100%;
-}
-.template-zope-interface-interface-listing-detail .position-0 .portlet-static,
-.template-listing-detail .position-0 .portlet-static{
-  display:none;
-}
-
-.template-zope-interface-interface-listing-detail.subsection-latest-listings-1 #portal-logo,
-.template-listing-detail.subsection-latest-listings-1 #portal-logo
-{
-  display:block;
-  top:0;
-  max-width:34%;
-}
-.template-zope-interface-interface-listing-detail.subsection-latest-listings-1 #portal-logo img,
-.template-listing-detail.subsection-latest-listings-1 #portal-logo img{
-  height:auto;
-  max-width:90%;
 }
