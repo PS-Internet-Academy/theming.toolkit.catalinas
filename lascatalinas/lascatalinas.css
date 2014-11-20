@@ -4,6 +4,10 @@
     height:auto;
     max-width:90%;
 }
+body #footer-wrapper #doormat-container p.footer_button a {
+    color: #fff !important;
+    font-size: 18px;
+}
 #content .listing-summary section{
     text-align: left;
     width: 100%;
@@ -28,6 +32,10 @@
 .listing-summary #search-form form .form-row-other .field span.option{
     width: auto !important;
 }
+.listing-summary #search-form form .form-row-other .field span.option label span.label{
+    position: relative;
+    top: -2px;
+}
 #listing-search #search-form #show-form a{
     font-size: 13px;
 }
@@ -42,14 +50,25 @@
 .listingBar span.next a{
     width:auto;
 }
-.listingBar span.active{
-    background-color: #06a7ea;
+#content div.listingBar span.active,#content div.listingBar span.active:hover{
+    background-color: #e37f1c !important;
     border-width: 0 !important;
     box-shadow: 0 1px 1px rgba(1, 1, 1, 0.25);
-    color: #ffffff;
+    color: #ffffff !important;
     margin-left: 5px;
     margin-right: 5px;
-    padding: 9px 15px !important;
+    padding: 7px 15px !important;
+}
+#content .listingBar span.active span,#content .listingBar span.active span:hover{
+    background-color: #e37f1c !important;   
+    color: #ffffff !important;
+}
+#content div.listingBar .next ,
+#content div.listingBar .previous,
+#content div.listingBar .next:hover ,
+#content div.listingBar .previous:hover{
+    background-color: transparent !important;
+    padding: 0;
 }
 .listingBar a{
     background-color: #fff;
@@ -115,10 +134,8 @@
 }
 div.pp_pic_holder{
     height: 595px !important;
-    left: 360px !important;
-    top: 68px !important;
     width: 800px !important;
-    position: fixed;
+    position: fixed; 
 }
 .pp_content{
     height: 500px !important;
@@ -129,7 +146,7 @@ div.pp_pic_holder{
 div.pp_default .pp_content_container .pp_details{
     bottom: 22px;
     position: absolute;
-    width: 91% !important;  
+    width: 91% !important;    
 }
 .pp_content .listing_title{
     float: right;
@@ -459,8 +476,26 @@ body .documentFirstHeading{
     float: left;
     margin-right: 3%;
 }
+#doormat-container dl dd{
+    word-break: break-all;
+}
 div.listingBar {
     clear: both;
+}
+#content div.listingBar span,#content div.listingBar a,#content div.listingBar span:hover,#content div.listingBar a:hover{
+    color:#ffffff !important;
+    font-size: 14px;
+    font-weight: bold !important;
+    background-color: #e5d8bd !important;
+    border-radius: 11px;
+    margin-bottom: 5px;
+}
+#content div.listingBar span,#content div.listingBar span:hover{
+    background-color: transparent !important;
+    color:#000000 !important;
+}
+#content div.listingBar a:hover{
+    background-color: #e37f1c !important;
 }
 .background-green{   
     background-color: #00a15f;
@@ -670,6 +705,7 @@ table.listing tr.odd th{
     line-height: 34px;
     text-align: center;
     width: 270px;   
+    margin-top: 12px;
 }
 #content .agent-contact-link a,.agent-contact-link a:hover{
     font-family:Arial, Helvetica, sans-serif; 
@@ -735,10 +771,16 @@ table.listing tr.odd th{
     line-height: 28px;
 }
 body input[type="checkbox"] {
-    margin: 0 5px 2px 3px;
+    margin: 0 0 2px;
 }
 body input[type="radio"] {
     margin: 2px 5px 1px 3px;
+}
+body .portletFilterSearch input[type="checkbox"]{
+    margin: 0 5px 5px 3px;
+}
+body .portletFilterSearch input[type="radio"]{
+    margin: 3px 5px 3px 3px;
 }
 .portletQuickSearch .form-row-beds-baths  select,
 .portletQuickSearch .form-row-sizes  select {
@@ -763,11 +805,82 @@ body input[type="radio"] {
 .galleria-container img {
     height: auto !important;
 }
+.form-row-listing-type .field span.option.class_rental{
+    float: none;
+}
+.form-row-listing-type .field span.option.class_sale{
+    float: none;
+}
+.form-row-listing-type .field span.option.class_home{
+    position: absolute;
+    left: 51%;
+    top: 0;
+}
+.form-row-listing-type .field span.option.class_condo{
+    position: absolute;
+    left: 51%;
+    top: 23px;
+}
+.form-row-listing-type .field span.option.class_lot{
+    left: 51%;
+    position: relative;
+}
+.form-row-beds .field span.option.class_--NOVALUE--{
+    float: none;
+}
+.form-row-beds .field span.option.class_1{
+    float: none;
+}
+.form-row-beds .field span.option.class_2{
+    float: none;
+}
+.form-row-beds .field span.option.class_3{
+    float: none;
+}
+.form-row-beds .field span.option.class_4{
+    position: absolute;
+    left: 51%;
+    top: 0;
+}
+.form-row-beds .field span.option.class_5{
+    position: absolute;
+    left: 51%;
+    top: 23px;
+}
+.form-row-beds .field span.option.class_6{
+    left: 51%;
+    position: absolute;
+    top: 48px;
+}
+.portletFilterSearch label[for="form-widgets-listing_type-2"]{
+    margin:0;   
+}
+.form-row-listing-type .field span.option {
+    width: 51%;
+}
+.portletQuickSearch .form-row-listing-type .field span.option {
+    width: 100%;
+}
+#formfield-form-widgets-price_sale.label{
+    white-space: nowrap;   
+}
+body .form-row-beds input[type="radio"]{
+    margin: 3px 0;
+}
+.descriptionBox {
+    font-size:13px;
+    font-family: Arial,Helvetica,sans-serif;
+    line-height: normal;
+    margin-top: 10px;
+}
 @media (min-width: 1200px){
+    div.pp_pic_holder{
+        left: 360px !important;
+        top: 26px !important;
+    }
     .listing-summary figure .quick_preview_button,.listing-summary figure .status_box{
         right: 0;
     }
-
     #fullbgnav #navibar .nav li a{
         font-size: 18px;
     }
@@ -819,6 +932,21 @@ body input[type="radio"] {
     } 
 }
 @media (min-width: 980px) and (max-width:1199px){
+    #formfield-form-widgets-price_sale input{
+        position: absolute;   
+    }
+    #formfield-form-widgets-price_sale span.label{
+        display: inline-block;
+        line-height: normal;
+        padding-left: 23px;
+        white-space: normal;
+        width: 80%;
+        padding-top: 0;
+    }
+    div.pp_pic_holder{
+        left: 165px !important;
+        top: 35px !important;
+    }
     #content .listing-summary section .row .value {
         float: right;
         left: 100px;
@@ -888,6 +1016,16 @@ body input[type="radio"] {
     }
 }
 @media (min-width: 768px) and (max-width: 979px){
+    .pp_content .listing_details {
+        float: left !important;
+        margin-left: 1% !important;
+        width: 38% !important;
+    }
+    div.pp_pic_holder{
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+    }
     .listing-summary figure .quick_preview_button,.listing-summary figure .status_box{
         right: 0;
     }
@@ -966,8 +1104,38 @@ body input[type="radio"] {
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
+    .pp_content .listing_image {
+        float: none !important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .pp_content .listing_title {
+        width: 78% !important;
+    }
+    .pp_content .listing_details {
+        float: none !important;
+        margin: 0 auto;
+        width: 50% !important;
+    }
+    .pp_content .listing_details .label {
+        width: 45% !important;
+    }
+    div.pp_pic_holder{
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+    .pp_content {
+        height: auto !important;
+    }
+    div.pp_default .pp_content_container .pp_details {
+        bottom: 0 !important;
+        position: relative !important;
+        width: 100% !important;
+    }
     .portletFilterSearch #formfield-form-widgets-beds .option{
-        width:50%;
+        width:100%;
         float:left;
     }
     #formfield-form-widgets-price_min{
@@ -1047,8 +1215,46 @@ body input[type="radio"] {
     }
 }
 @media (min-width: 481px) and (max-width: 599px){
+    div.pp_default .pp_nav .currentTextHolder {
+        top: 0 !important;
+    }
+    .pp_content .listing_image {
+        float: none !important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .pp_content .listing_title {
+        margin: 10px 0;
+        width: 100% !important;
+    }
+    .pp_content .listing_details {
+        float: none !important;
+        margin: 0 auto;
+        width: 60% !important;
+    }
+    .pp_content .listing_details .label {
+        width: 45% !important;
+    }
+    div.pp_pic_holder{
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+    .listing_controls .more_details {
+        bottom: 17px !important;
+        right: 119px !important;
+    }
+    .pp_content {
+        height: auto !important;
+    }
+    div.pp_default .pp_content_container .pp_details {
+        bottom: 0 !important;
+        position: relative !important;
+        width: 100% !important;
+    }
     .portletFilterSearch #formfield-form-widgets-beds .option{
-        width:50%;
+        width:100%;
         float:left;
     }
     #formfield-form-widgets-price_min{
@@ -1127,8 +1333,46 @@ body input[type="radio"] {
     }
 }
 @media (min-width: 401px) and (max-width: 480px){
+    div.pp_default .pp_nav .currentTextHolder {
+        top: 0 !important;
+    }
+    .pp_content .listing_image {
+        float: none !important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .pp_content .listing_title {
+        margin: 10px 0;
+        width: 100% !important;
+    }
+    .pp_content .listing_details {
+        float: none !important;
+        margin: 0 auto;
+        width: 100% !important;
+    }
+    .pp_content .listing_details .label {
+        width: 45% !important;
+    }
+    div.pp_pic_holder{
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+    .listing_controls .more_details {
+        bottom: 14px !important;
+        right: 90px !important;
+    }
+    .pp_content {
+        height: auto !important;
+    }
+    div.pp_default .pp_content_container .pp_details {
+        bottom: 0 !important;
+        position: relative !important;
+        width: 100% !important;
+    }
     .portletFilterSearch #formfield-form-widgets-beds .option{
-        width:50%;
+        width:100%;
         float:left;
     }
     #formfield-form-widgets-price_min{
@@ -1207,8 +1451,49 @@ body input[type="radio"] {
     }
 }
 @media (min-width: 321px) and (max-width: 400px){
+    div.pp_default .pp_nav .currentTextHolder {
+        left: 52px !important;
+        top: 0 !important;
+    }
+    .pp_content .listing_image {
+        float: none !important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .pp_content .listing_title {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 100% !important;
+    }
+    .pp_content .listing_details {
+        float: none !important;
+        margin: 0 auto;
+        width: 98% !important;
+    }
+    .pp_content .listing_details .label {
+        width: 45% !important;
+        padding: 0 !important;
+    }
+    div.pp_pic_holder{
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+    .listing_controls .more_details {
+        bottom: 14px !important;
+        right: 65px !important;
+    }
+    .pp_content {
+        height: auto !important;
+    }
+    div.pp_default .pp_content_container .pp_details {
+        bottom: 0 !important;
+        position: relative !important;
+        width: 100% !important;
+    }
     .portletFilterSearch #formfield-form-widgets-beds .option{
-        width:50%;
+        width:100%;
         float:left;
     }
     #formfield-form-widgets-price_min{
@@ -1293,8 +1578,49 @@ body input[type="radio"] {
     }
 }
 @media (min-width: 241px) and (max-width: 320px){
+    div.pp_default .pp_nav .currentTextHolder {
+        left: 40px !important;
+        top: 0 !important;
+    }
+    .pp_content .listing_image {
+        float: none !important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .pp_content .listing_title {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 100% !important;
+    }
+    .pp_content .listing_details {
+        float: none !important;
+        margin: 0 auto;
+        width: 98% !important;
+    }
+    .pp_content .listing_details .label {
+        width: 45% !important;
+        padding: 0 !important;
+    }
+    div.pp_pic_holder{
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+    .listing_controls .more_details {
+        bottom: 10px !important;
+        right: 58px  !important;
+    }
+    .pp_content {
+        height: auto !important;
+    }
+    div.pp_default .pp_content_container .pp_details {
+        bottom: 0 !important;
+        position: relative !important;
+        width: 100% !important;
+    }
     .portletFilterSearch #formfield-form-widgets-beds .option{
-        width:50%;
+        width:100%;
         float:left;
     }
     #formfield-form-widgets-object_type .option,
@@ -1348,7 +1674,7 @@ body input[type="radio"] {
     }
     #portal-searchbox{
         position:absolute !important;
-        top: 247px;
+        top: 0;
         right: 0;
     }
     #fullbgnav #navibar .nav li a{
@@ -1386,8 +1712,49 @@ body input[type="radio"] {
     }
 }
 @media (max-width: 240px){
+    div.pp_default .pp_nav .currentTextHolder {
+        left: 40px !important;
+        top: 0 !important;
+    }
+    .pp_content .listing_image {
+        float: none !important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .pp_content .listing_title {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 100% !important;
+    }
+    .pp_content .listing_details {
+        float: none !important;
+        margin: 0 auto;
+        width: 98% !important;
+    }
+    .pp_content .listing_details .label {
+        width: 45% !important;
+        padding: 0 !important;
+    }
+    div.pp_pic_holder{
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+    .listing_controls .more_details {
+        bottom: 10px !important;
+        right: 65px !important;
+    }
+    .pp_content {
+        height: auto !important;
+    }
+    div.pp_default .pp_content_container .pp_details {
+        bottom: 0 !important;
+        position: relative !important;
+        width: 100% !important;
+    }
     .portletFilterSearch #formfield-form-widgets-beds .option{
-        width:50%;
+        width:100%;
         float:left;
     }
     #formfield-form-widgets-object_type .option,
@@ -1435,7 +1802,7 @@ body input[type="radio"] {
     }
     #portal-searchbox{
         position:absolute !important;
-        top: 247px;
+        top: 0;
     }
     #fullbgnav #navibar .nav li a{
         font-size: 16px;

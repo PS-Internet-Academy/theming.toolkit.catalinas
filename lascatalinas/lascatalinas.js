@@ -18,9 +18,9 @@ function enhance_listingbar(){
 
 function pimp_startpage(){
     
-    $(".subsection-latest-listings-1 #portal-column-two").remove();
-    $(".subsection-latest-listings-1 .tileItem.full-column").removeClass('full-column');
-    $(".subsection-latest-listings-1 #portal-column-content").removeClass().addClass("cell width-3:4 position-1:4");
+    $(".template-document_view.subsection-latest-listings-1 #portal-column-two").remove();
+    $(".template-document_view.subsection-latest-listings-1 .tileItem.full-column").removeClass('full-column');
+    $(".template-document_view.subsection-latest-listings-1 #portal-column-content").removeClass().addClass("cell width-3:4 position-1:4");
 
     
 }
@@ -176,12 +176,18 @@ function pricing(){
     $("#fieldsetlegend-financial-information").text("Pricing");
 }
 
+function listingbar_next_back_button(){
+    ( $(".listingBar .next a" ) ).text('>>');
+    ( $(".listingBar .previous a" ) ).text('<<');
+}
+
 $(document).ready(function () {
     if($('.subsection-latest-listings-1').length>0 && $('.template-zope-interface-interface-listing-detail').length===0){
         pimp_startpage();
     }
     if($('.listingBar').length>0 ){
         enhance_listingbar();
+        listingbar_next_back_button();
     }
     if($('#fieldsetlegend-financial-information').length>0 ){
         pricing();

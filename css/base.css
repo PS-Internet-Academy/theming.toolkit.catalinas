@@ -185,14 +185,7 @@ body{
 .galleria-info-text{
     padding:8% 0;   
 }
-.galleria-thumbnails .galleria-image {
-    height: 40px !important;
-    width: 60px !important;
-}
-.galleria-thumbnails .galleria-image img {
-    height: 40px !important;
-    width: 60px !important;
-}
+
 #header{   
     margin:0 auto;
 }
