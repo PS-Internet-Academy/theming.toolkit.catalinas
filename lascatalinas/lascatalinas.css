@@ -1,3 +1,13 @@
+/*Ajax Filter Font*/
+
+.aJaXFilter,
+body .portletWrapper .aJaXFilter .portletHeader,
+.aJaXFilter label, 
+.aJaXFilter span
+{
+    font-family: 'Crimson Text', serif;
+}
+
 #portal-logo img{
     padding: 5%;
     margin:0;
@@ -7,6 +17,13 @@
 body #footer-wrapper #doormat-container p.footer_button a {
     color: #fff !important;
     font-size: 18px;
+}
+#listing-details #fieldset-listing-details table.listing .total_under_roof_area {
+    display: none !important;
+}
+.listing-summary figure .status_box.PendingSale {
+    width: 120px;
+    background-color: #ffa500 !important;
 }
 #content .listing-summary section{
     text-align: left;
@@ -136,17 +153,24 @@ div.pp_pic_holder{
     height: 595px !important;
     width: 800px !important;
     position: fixed; 
+    max-height: 100% !important;
 }
 .pp_content{
-    height: 500px !important;
     overflow: auto;
     padding: 3%;
     width: 94% !important;  
 }
+a.pp_next {
+    width: 45%;
+}
+.pp_details {
+    z-index: 9999;
+}
 div.pp_default .pp_content_container .pp_details{
     bottom: 22px;
     position: absolute;
-    width: 91% !important;    
+    width: 91% !important;   
+    z-index: 9999;
 }
 .pp_content .listing_title{
     float: right;
@@ -175,7 +199,7 @@ div.pp_default .pp_content_container .pp_details{
 }
 .listing_controls .more_details{
     background-color:#ff8000;
-    bottom: 26px;
+    bottom: 18px;
     color: #ffffff;
     line-height: 32px;
     padding: 0 25px;
@@ -776,12 +800,6 @@ body input[type="checkbox"] {
 body input[type="radio"] {
     margin: 2px 5px 1px 3px;
 }
-body .portletFilterSearch input[type="checkbox"]{
-    margin: 0 5px 5px 3px;
-}
-body .portletFilterSearch input[type="radio"]{
-    margin: 3px 5px 3px 3px;
-}
 .portletQuickSearch .form-row-beds-baths  select,
 .portletQuickSearch .form-row-sizes  select {
     text-align: center;
@@ -874,6 +892,9 @@ body .form-row-beds input[type="radio"]{
     margin-top: 10px;
 }
 @media (min-width: 1200px){
+    a.pp_next {
+        margin-right: 42px;
+    }
     div.pp_pic_holder{
         left: 360px !important;
         top: 26px !important;
@@ -932,6 +953,9 @@ body .form-row-beds input[type="radio"]{
     } 
 }
 @media (min-width: 980px) and (max-width:1199px){
+    a.pp_next {
+        margin-right: 40px;
+    }
     #formfield-form-widgets-price_sale input{
         position: absolute;   
     }
@@ -1016,6 +1040,13 @@ body .form-row-beds input[type="radio"]{
     }
 }
 @media (min-width: 768px) and (max-width: 979px){
+    a.pp_next {
+        margin-right: 50px;
+        width: 43% !important;
+    }
+    div.pp_pic_holder{
+        overflow: auto;
+    }
     .pp_content .listing_details {
         float: left !important;
         margin-left: 1% !important;
@@ -1104,6 +1135,16 @@ body .form-row-beds input[type="radio"]{
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
+    a.pp_next {
+        margin-right: 190px;
+        width: 39% !important;
+    }
+    a.pp_previous {
+        width: 36% !important;
+    }
+    div.pp_pic_holder{
+        overflow: auto;
+    }
     .pp_content .listing_image {
         float: none !important;
         text-align: center;
@@ -1127,7 +1168,7 @@ body .form-row-beds input[type="radio"]{
         height: auto !important;
     }
     .pp_content {
-        height: auto !important;
+        max-height: 100% !important;
     }
     div.pp_default .pp_content_container .pp_details {
         bottom: 0 !important;
@@ -1215,6 +1256,16 @@ body .form-row-beds input[type="radio"]{
     }
 }
 @media (min-width: 481px) and (max-width: 599px){
+    a.pp_next {
+        margin-right: 293px;
+        width: 30% !important;
+    }
+    a.pp_previous {
+        width: 30% !important;
+    }
+    div.pp_pic_holder{
+        overflow: auto;
+    }
     div.pp_default .pp_nav .currentTextHolder {
         top: 0 !important;
     }
@@ -1333,6 +1384,16 @@ body .form-row-beds input[type="radio"]{
     }
 }
 @media (min-width: 401px) and (max-width: 480px){
+    a.pp_next {
+        margin-right: 405px;
+        width: 20% !important;
+    }
+    a.pp_previous {
+        width: 20% !important;
+    }
+    div.pp_pic_holder{
+        overflow: auto;
+    }
     div.pp_default .pp_nav .currentTextHolder {
         top: 0 !important;
     }
@@ -1451,6 +1512,16 @@ body .form-row-beds input[type="radio"]{
     }
 }
 @media (min-width: 321px) and (max-width: 400px){
+    a.pp_next {
+        margin-right: 422px;
+        width: 17% !important;
+    }
+    a.pp_previous {
+        width: 20% !important;
+    }
+    div.pp_pic_holder{
+        overflow: auto;
+    }
     div.pp_default .pp_nav .currentTextHolder {
         left: 52px !important;
         top: 0 !important;
@@ -1578,6 +1649,16 @@ body .form-row-beds input[type="radio"]{
     }
 }
 @media (min-width: 241px) and (max-width: 320px){
+    a.pp_next {
+        margin-right: 494px;
+        width: 17% !important;
+    }
+    a.pp_previous {
+        width: 17% !important;
+    }
+    div.pp_pic_holder{
+        overflow: auto;
+    }
     div.pp_default .pp_nav .currentTextHolder {
         left: 40px !important;
         top: 0 !important;
@@ -1712,6 +1793,13 @@ body .form-row-beds input[type="radio"]{
     }
 }
 @media (max-width: 240px){
+    a.pp_next {
+        margin-right: 50px;
+        width: 43% !important;
+    }
+    div.pp_pic_holder{
+        overflow: auto;
+    }
     div.pp_default .pp_nav .currentTextHolder {
         left: 40px !important;
         top: 0 !important;

@@ -1,3 +1,5 @@
+window.blockFotoramaData=true;
+
 function move_listing_gallery(){
   //on listing details move image gallery to right portlet column
   //#content .listing.detail #listing-images
@@ -29,10 +31,25 @@ function map_listing_data(){
  //use data input to give back a easy to access array for mapping
   dict=[];
 
-  dict.price= $('dl.price dd').html();
-  dict.propertytype= $('#listing-info dd.object_type').html();
-  dict.bed_bath=$('#listing-info dd.beds_baths').html();
-  dict.lotsize=$('#listing-info dd.lot_size').html();
+  if($('dl.price dd').length>0){
+    dict.price= $('dl.price dd').html();
+  }else{dict.price=null;}
+  
+  if($('#listing-info dd.object_type').length>0){
+    dict.propertytype= $('#listing-info dd.object_type').html();
+  }else{dict.propertytype=null;}
+  
+  if($('#listing-info dd.beds_baths').length>0){
+    dict.bed_bath= $('#listing-info dd.beds_baths').html();
+  }else{dict.bed_bath=null;}
+
+  if($('#listing-info dd.lot_size').length>0){
+    dict.lotsize= $('#listing-info dd.lot_size').html();
+  }else{dict.lotsize=null;}
+  
+  if($('#listing-details .living_area td').length>0){
+        dict.lotsize= $('#listing-details .living_area td').html();
+  }
   
   pool_text = $(".pool_meta td").html();
   if(pool_text !='No'){
@@ -182,6 +199,7 @@ function listingbar_next_back_button(){
 }
 
 $(document).ready(function () {
+   
     if($('.subsection-latest-listings-1').length>0 && $('.template-zope-interface-interface-listing-detail').length===0){
         pimp_startpage();
     }
