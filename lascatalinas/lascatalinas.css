@@ -166,11 +166,14 @@ a.pp_next {
 .pp_details {
     z-index: 9999;
 }
+.formPanel .listing .price_per_roof_area.even {
+    display: none !important;
+}
 div.pp_default .pp_content_container .pp_details{
     bottom: 22px;
     position: absolute;
     width: 91% !important;   
-    z-index: 9999;
+    z-index: 9998;
 }
 .pp_content .listing_title{
     float: right;
@@ -205,7 +208,7 @@ div.pp_default .pp_content_container .pp_details{
     padding: 0 25px;
     position: absolute;
     right: 217px; 
-    z-index: 20;
+    z-index: 9999;
 }
 .listing_controls .more_details a{
     color: #ffffff;
@@ -219,6 +222,10 @@ div.pp_default .pp_content_container .pp_details{
 .more_button:hover,
 .less_button:hover{
     text-decoration: underline;
+}
+.pp_content .status_box.PendingSale {
+    background-color: #ffa500 !important;
+    padding: 0 5px;
 }
 .pp_content_container .pp_content .status_box{
     background-color: #5987c5;
