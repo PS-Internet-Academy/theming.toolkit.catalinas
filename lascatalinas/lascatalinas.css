@@ -435,8 +435,12 @@ body .documentFirstHeading{
     padding-left: 35px;
     padding-top: 4px;  
 }
+#footer-wrapper #doormat-container .doormatColumn p.back-icon .email-link{
+    word-wrap: break-word; 
+}
 #footer-wrapper #doormat-container .doormatColumn.column-0 p{
     font-size:14px;
+    word-break: normal;
 }
 #footer-wrapper #doormat-container .doormatColumn.column-2 p{
     font-size:12px;
@@ -506,9 +510,6 @@ body .documentFirstHeading{
 .listing-summary .tileItem {
     float: left;
     margin-right: 3%;
-}
-#doormat-container dl dd{
-    word-break: break-all;
 }
 div.listingBar {
     clear: both;
@@ -659,7 +660,7 @@ table.listing tr.odd th{
     max-height: 250px;
     min-height: 250px;
     max-width: none;
-    width: auto;
+    width: 100%;
 }
 #content .listing-collection-tile .item{
     float:left;
@@ -898,6 +899,9 @@ body .form-row-beds input[type="radio"]{
     line-height: normal;
     margin-top: 10px;
 }
+.portletFilterSearch .form-row-listing-type #formfield-form-widgets-listing_type .collapse .option input {
+     margin-top: -7px;
+}
 @media (min-width: 1200px){
     a.pp_next {
         margin-right: 42px;
@@ -916,7 +920,7 @@ body .form-row-beds input[type="radio"]{
         width: 142px;
     }
     .listing-summary .tileItem {
-        width: 30%;
+        width: 47% !important;
     }
     .listing-collection-tile .collection-item.full-column,
     .listing-summary .tileItem.full-column{
@@ -929,6 +933,9 @@ body .form-row-beds input[type="radio"]{
         width: 30%;   
         text-align:center;
         min-height: 456px;
+    }
+    .listing-summary .tileItem.small-column a img{
+        width: 100% !important;
     }
     .listing-collection-tile figure img{
         max-width: none;
@@ -960,6 +967,12 @@ body .form-row-beds input[type="radio"]{
     } 
 }
 @media (min-width: 980px) and (max-width:1199px){
+    .section-rentals-and-real-estate #portal-column-content.width-3\:4.position-1\:4 {
+        width: 76%;
+    }
+    .listing-summary .tileItem a img{
+        width: 100% !important;
+    }
     a.pp_next {
         margin-right: 40px;
     }
@@ -998,7 +1011,7 @@ body .form-row-beds input[type="radio"]{
         width: 142px;
     }
     .listing-summary .tileItem {
-        width: 47%;
+        width: 47% !important
     }
     .listing-collection-tile .collection-item.full-column,
     .listing-summary .tileItem.full-column{
@@ -1008,7 +1021,7 @@ body .form-row-beds input[type="radio"]{
     }
     .listing-collection-tile .collection-item.small-column,
     .listing-summary .tileItem.small-column{
-        width: 30%;   
+        width: 32%;   
         text-align:center;
         min-height: 456px;
     }
@@ -1118,7 +1131,7 @@ body .form-row-beds input[type="radio"]{
     }
     .listing-summary .tileItem {
         width: 47%;
-        min-height: 350px;
+        min-height: 380px;
     }
     .listing-collection-tile .collection-item{
         width: 100%;
@@ -1142,6 +1155,16 @@ body .form-row-beds input[type="radio"]{
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
+    #content .listing-summary figure a img{
+        max-height: none;
+        max-width: none;
+        min-height: auto;
+        width: auto;
+    }
+    body #content .listing-summary .tileItem figure {
+        height: auto;
+        width: auto;
+    }
     a.pp_next {
         margin-right: 190px;
         width: 39% !important;
@@ -1263,6 +1286,16 @@ body .form-row-beds input[type="radio"]{
     }
 }
 @media (min-width: 481px) and (max-width: 599px){
+    #content .listing-summary figure a img{
+        max-height: none;
+        max-width: none;
+        min-height: auto;
+        width: auto;
+    }
+    #content .listing-summary .tileItem figure {
+        height: auto;
+        width: auto;
+    }
     a.pp_next {
         margin-right: 293px;
         width: 30% !important;
@@ -1371,7 +1404,7 @@ body .form-row-beds input[type="radio"]{
     .listing-summary .tileItem {
         float: none;
         margin: 0 auto 1em !important;
-        width: 67%;
+        width: 75%;
     }
     .listing-collection-tile .collection-item{
         width: 100%;
@@ -1519,6 +1552,16 @@ body .form-row-beds input[type="radio"]{
     }
 }
 @media (min-width: 321px) and (max-width: 400px){
+    #content .listing-summary figure a img{
+        max-height: none;
+        max-width: none;
+        min-height: auto;
+        width: auto;
+    }
+    #content .listing-summary .tileItem figure {
+        height: auto;
+        width: auto;
+    }
     a.pp_next {
         margin-right: 422px;
         width: 17% !important;

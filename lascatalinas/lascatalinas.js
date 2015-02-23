@@ -193,6 +193,9 @@ function pricing(){
     $("#fieldsetlegend-financial-information").text("Pricing");
 }
 
+function portlet_column_one_to_top(){
+    $("#portal-column-one").prependTo("#portal-columns");
+}
 function listingbar_next_back_button(){
     ( $(".listingBar .next a" ) ).text('>>');
     ( $(".listingBar .previous a" ) ).text('<<');
@@ -206,6 +209,9 @@ $(document).ready(function () {
     if($('.listingBar').length>0 ){
         enhance_listingbar();
         listingbar_next_back_button();
+    }
+    if($('#portal-column-one').length>0 ){
+        portlet_column_one_to_top();
     }
     if($('#fieldsetlegend-financial-information').length>0 ){
         pricing();
